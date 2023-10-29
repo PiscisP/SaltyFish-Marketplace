@@ -1,0 +1,18 @@
+community-marketplace/
+community-marketplace/
+|-- src/
+|   |-- components/
+|   |   |-- NavBar.vue
+|   |
+|   |-- views/
+|   |   |-- HomeView.vue
+|   |   |-- LoginView.vue
+|   |   |-- RegisterView.vue
+|   |
+|   |-- router/
+|   |   |-- index.js
+|   |
+|   |-- App.vue
+|   |-- main.js
+|
+|-- package.json
