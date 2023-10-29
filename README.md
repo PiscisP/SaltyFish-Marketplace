@@ -1,4 +1,5 @@
-# vue_demo
+
+# community-marketplace
 
 ## Project setup
 ```
@@ -20,5 +21,5 @@ npm run build
 npm run lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+# SaltyFish-Marketplace
+
