@@ -1,0 +1,74 @@
+<template>
+  <div class="main-page">
+    <SearchBar />
+    <div class="items-grid">
+      <button 
+        v-for="item in items" 
+        :key="item.id" 
+        class="item-button" 
+        @click="goToItemDetail(item.id)"
+      >
+        {{ item.name }}
+      </button>
+    </div>
+    <BottomNavBar />
+  </div>
+</template>
+
+<script>
+import SearchBar from '@/components/SearchBar.vue'; // Assuming SearchBar.vue is in the components directory
+import BottomNavBar from '@/components/BottomNavBar.vue'; // Adjust the path as necessary
+
+export default {
+  name: 'MainPage',
+  components: {
+    SearchBar,
+    BottomNavBar
+  },
+  data() {
+    return {
+      items: [
+        // Populate this array with items. Each item should have an id and name.
+        // Example: { id: 1, name: 'Item 1' }, { id: 2, name: 'Item 2' }, ...
+      ]
+    };
+  },
+  methods: {
+    goToItemDetail(itemId) {
+      // Navigate to the ItemDetail page with the item's id
+      this.$router.push({ name: 'ItemDetail', params: { id: itemId } });
+    }
+  }
+}
+</script>
+
+<style scoped>
+.main-page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Use the full height of the viewport */
+}
+
+.items-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Creates a 4-column grid */
+  gap: 10px; /* Adjust the gap between items as needed */
+  padding: 10px;
+  overflow: auto; /* Allows scrolling if content overflows */
+  margin-top: 60px; /* Adjust based on the height of your search bar */
+  flex-grow: 1; /* Allows the grid to grow and fill available space */
+}
+
+.item-button {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.item-button:hover {
+  background-color: #eaeaea;
+}
+</style>

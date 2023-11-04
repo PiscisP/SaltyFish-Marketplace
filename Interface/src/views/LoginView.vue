@@ -21,10 +21,16 @@ export default {
   methods: {
     login() {
       console.log('Login:', this.username, this.password);
+      // Mock login validation
+      if (this.username && this.password) {
+        // Redirect to the main page
+        this.$router.push({ name: 'MainPage' });
+      }
     }
   }
 }
 </script>
+
 
 <style>
 div {
