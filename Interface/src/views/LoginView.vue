@@ -28,6 +28,37 @@ export default {
       }
     }
   }
+/*
+  methods: {
+    async login() {
+      try {
+        console.log('Login:', this.username, this.password);
+        
+        // This is where you would implement the actual login logic.
+        // For demonstration purposes, we'll just simulate an API call with a timeout.
+        const response = await new Promise((resolve, reject) => {
+          setTimeout(() => {
+            // This is where you would resolve with an actual response from an API.
+            resolve({ success: true });
+          }, 1000);
+        });
+
+        if (response.success) {
+          // Redirect to the main page
+          this.$router.push({ name: 'MainPage' });
+        } else {
+          // Handle login failure (e.g., wrong credentials)
+          console.error('Login failed: Invalid credentials');
+          // Here you should set an error message in your data to be displayed to the user.
+        }
+      } catch (error) {
+        // Handle errors (e.g., network error, server error)
+        console.error('Login error:', error);
+        // Set an error message in your data to be displayed to the user.
+      }
+    }
+  }
+  */
 }
 </script>
 
