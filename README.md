@@ -1,25 +1,17 @@
+# SaltyFish Marketplace
 
-# community-marketplace
+## Description
+SaltyFish Marketplace is a platform for buying and selling used items. Users can create accounts, list items, browse listings, and chat with other users.
 
-## Project setup
-```
-npm install
-```
+## Features
+- User account creation
+- Item listing and browsing
+- In-app messaging
+- Search functionality
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## Setup
+1. Clone the repository.
+2. Install dependencies with `npm install`.
+3. Start the development server with `npm run serve`.
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-# SaltyFish-Marketplace
 

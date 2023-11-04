@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\demo4",
+    "\\demo4\\src",
+    "\\demo4\\src\\main",
+    "\\demo4\\src\\main\\java",
+    "\\demo4\\src\\main\\java\\com",
+    "\\demo4\\src\\main\\java\\com\\test",
+    "\\demo4\\src\\main\\java\\com\\test\\service",
+    "\\demo4\\src\\main\\resources",
+    "\\demo4\\src\\main\\resources\\static"
+  ],
+  "SelectedNode": "\\demo4\\src\\main\\resources\\static\\index.html",
+  "PreviewInSolutionExplorer": false
+}
