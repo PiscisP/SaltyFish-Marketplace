@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 import HomeView from './views/HomeView.vue';
 import LoginView from './views/LoginView.vue';
 import RegisterView from './views/RegisterView.vue';
-
+import MessagesView from './views/MessagesView.vue';
 const routes = [
   {
     path: '/',
@@ -23,7 +23,12 @@ const routes = [
       path: '/main',
       name: 'MainPage',
       component: () => import('./views/MainPage.vue')
-    }
+    },
+    {
+        path: '/messages',
+        name: 'Messages',
+        component: MessagesView,
+     },
 ];
 
 const router = createRouter({
