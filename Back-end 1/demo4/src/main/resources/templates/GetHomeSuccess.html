@@ -1,17 +1,18 @@
 <!DOCTYPE html>
-
 <html xmlns:th="http://www.thymeleaf.org">
-
-<meta charset="UTF-8" />
-<title>GetHomeSuccess</title>
-<head></head>
+<head>
+    <title>Home</title>
+</head>
 <body>
-<h1> This is home page</h1>
-<div th:text="${message}"></div>
-<div th:if="${result}">
-    <h2>Click the link to login</h2>
-    <a href="http://localhost:9999/login?username=chenjiewen&password=admin">click me to log in</a>
-</div>
+<h1>Home</h1>
+<p> GET ALL Customers: </p>
+<p th:text="${get_all}"></p>
+
+<p>GET BY ID: </p>
+<p th:text="${get_by_id}"></p>
+
+<p>UPDATE: </p>
+<p th:text="${after_update}"></p>
+
 </body>
 </html>
-
