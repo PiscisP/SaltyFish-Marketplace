@@ -62,6 +62,7 @@ export default {
   overflow-y: auto;
   padding: 10px;
   height: 100%; /* Take up all available height */
+  width: 100%;
 }
 
 /* ... rest of your styles ... */
