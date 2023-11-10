@@ -49,7 +49,7 @@ public class SqlTestPageController {
         //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         message = "";
 
-        testMapper.updateCustomerPhone(2, "425 123 4567");
+        testMapper.updateCustomerPhone(2, "10086");
         customers =testMapper.selectByID(2);
         for (TestEntity te : customers){
             message += te.getFirst_name() + " ";
