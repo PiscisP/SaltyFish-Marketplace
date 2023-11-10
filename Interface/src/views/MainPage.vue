@@ -1,6 +1,6 @@
 <template>
   <div class="main-page">
-    <SearchBar />
+    <MainNavBar />
     <div class="items-grid">
       <button 
         v-for="item in items" 
@@ -16,15 +16,17 @@
 </template>
 
 <script>
-import SearchBar from '@/components/SearchBar.vue'; // Assuming SearchBar.vue is in the components directory
-import BottomNavBar from '@/components/BottomNavBar.vue'; // Adjust the path as necessary
+
+import BottomNavBar from '@/components/BottomNavBar.vue'; 
+import MainNavBar from '@/components/MainNavBar.vue';
 
 export default {
   name: 'MainPage',
   components: {
-    SearchBar,
-    BottomNavBar
-  },
+    //SearchBar,
+    BottomNavBar,
+    MainNavBar,
+},
   data() {
     return {
       items: [
@@ -42,11 +44,12 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="less" rel= "stylesheet" scoped>
 .main-page {
   display: flex;
   flex-direction: column;
   height: 100vh; /* Use the full height of the viewport */
+  position:relative;
 }
 
 .items-grid {
@@ -55,7 +58,7 @@ export default {
   gap: 10px; /* Adjust the gap between items as needed */
   padding: 10px;
   overflow: auto; /* Allows scrolling if content overflows */
-  margin-top: 60px; /* Adjust based on the height of your search bar */
+  margin-top: 60px; 
   flex-grow: 1; /* Allows the grid to grow and fill available space */
 }
 
@@ -72,3 +75,4 @@ export default {
   background-color: #eaeaea;
 }
 </style>
+

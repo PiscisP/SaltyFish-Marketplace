@@ -21,23 +21,21 @@ const routes = [
     path: '/register',
     name: 'register',
     component: RegisterView,
-    meta: { showNavBar: true } 
+    meta: { showMainNavBar: true } 
   },
-  {
-      path: '/main',
-      name: 'MainPage',
-      component: () => import('./views/MainPage.vue')
-    },
     {
         path: '/messages',
         name: 'Messages',
         component: MessagesView,
+        meta: { showNavBar: false } 
      },
     {
     path: '/main',
     name: 'MainPage',
     component: () => import('./views/MainPage.vue'),
-    meta: { showNavBar: false } 
+    meta: { showNavBar: false,
+      showMainNavBar: true
+    }
     },
     {
       path: '/account',
