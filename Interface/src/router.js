@@ -9,34 +9,26 @@ const routes = [
     path: '/',
     name: 'home',
     component: HomeView,
-    meta: { showNavBar: true }
   },
   {
     path: '/login',
     name: 'login',
     component: LoginView,
-    meta: { showNavBar: true } 
   },
   {
     path: '/register',
     name: 'register',
     component: RegisterView,
-    meta: { showMainNavBar: true } 
   },
     {
         path: '/messages',
         name: 'Messages',
-        component: MessagesView,
-        meta: { showNavBar: false,
-        showMainNavBar:false}
+        component: MessagesView
      },
     {
     path: '/main',
     name: 'MainPage',
     component: () => import('./views/MainPage.vue'),
-    meta: { showNavBar: false,
-      showMainNavBar: true
-    }
     },
     {
       path: '/account',
@@ -44,6 +36,7 @@ const routes = [
       component: AccountDetails,
       meta: { showNavBar: false }
     },
+
 ];
 
 const router = createRouter({

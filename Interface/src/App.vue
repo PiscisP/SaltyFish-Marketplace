@@ -1,14 +1,13 @@
 <template>
-  <div id="app">
+  <!-- <div id="app"> -->
     <!-- Show NavBar on every page except 'MainPage' and 'account' -->
-    
     <!-- Show MainNavBar only on 'MainPage' and 'account' -->
     <!-- <MainNavBar v-if="showMainNavBar" /> -->
     <!-- <div id="app"> -->
       <NavBar v-if="showNavBar" />
       <router-view />
     <!-- </div> -->
-  </div>
+  <!-- </div> -->
 </template>
 
 <script>
