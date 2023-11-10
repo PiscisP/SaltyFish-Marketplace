@@ -59,4 +59,10 @@ export default {
   border-radius: 4px;
   font-size: 16px;
 }
+.main-nav-bar button {
+  padding: 10px; 
+  font-size: 16px; 
+  color: white; 
+  width: auto; 
+}
 </style>
