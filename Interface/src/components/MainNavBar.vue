@@ -27,7 +27,7 @@ export default {
     search() {
       // Logic to perform search
       console.log('Searching for:', this.searchQuery);
-      // Implement the search logic or emit an event here
+      // need to implement with backend api later
     }
   }
 };
@@ -35,15 +35,14 @@ export default {
 
 <style lang="less" rel= "stylesheet" scoped>
 .main-nav-bar {
-  /* Style your main nav bar */
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px;
   background-color: #333;
   color: white;
-  z-index: 1000; /* Ensure it sits above other content */
-  height: 60px; /* Example fixed height */
+  z-index: 1000; 
+  height: 60px; 
   position:fixed;
   top: 0; /* Stick to the top of the viewport */
 }

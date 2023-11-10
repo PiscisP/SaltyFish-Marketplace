@@ -1,6 +1,7 @@
 <template>
   <div class="main-page">
     <MainNavBar />
+    <BottomNavBar />
     <div class="items-grid">
       <button 
         v-for="item in items" 
@@ -11,7 +12,6 @@
         {{ item.name }}
       </button>
     </div>
-    <BottomNavBar />
   </div>
 </template>
 
@@ -45,10 +45,34 @@ export default {
 </script>
 
 <style>
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden; /* to prevent any unwanted scrolling */
+}
 .main-page {
   display: flex;
   flex-direction: column;
+  width: 100%;
   height: 100vh; /* Use the full height of the viewport */
+  /* background: url("~@/Background/SCU1.png") center center no-repeat;
+  background-size: cover; */
+  position: fixed;
+}
+
+.main-page::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url("~@/Background/SCU1.png") center center no-repeat;
+  background-size: cover;
+  opacity: 0.3; /* Adjust the transparency level */
+  z-index: -1;  /* Place it behind the content */
 }
 
 .items-grid {

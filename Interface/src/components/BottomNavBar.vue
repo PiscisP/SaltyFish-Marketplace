@@ -4,7 +4,7 @@
       <i class="fas fa-comments"></i> <!-- Assuming you're using FontAwesome for icons -->
       <span>Messages</span>
     </button>
-    <button class="nav-item plus" @click="addNewItem">+</button>
+    <button class="nav-item plus" @click="addNewItem">Sell</button>
     <button class="nav-item" @click="goToProfile">
       <i class="fas fa-user"></i> <!-- FontAwesome icon -->
       <span>Profile</span>
@@ -39,11 +39,14 @@ export default {
   position: fixed;
   bottom: 0;
   left: 0;
+  height:40px;
   z-index: 1000;
   background-color: #333;
   color: white;
   padding: 10px 0;
+  margin: 0;
 }
+
 
 .nav-item {
   display: flex;
@@ -63,18 +66,8 @@ export default {
   margin-bottom: 5px; /* Space between icon and text */
 }
 
-.nav-item.plus {
-  font-size: 24px;
-  color: #4CAF50;
-}
-
-.nav-item:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
-/* Ensure text and icons are white */
-.nav-item i,
-.nav-item span {
-  color: white;
-}
+/* .nav-item.plus {
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+} */
 </style>
