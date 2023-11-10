@@ -27,7 +27,8 @@ const routes = [
         path: '/messages',
         name: 'Messages',
         component: MessagesView,
-        meta: { showNavBar: false } 
+        meta: { showNavBar: false,
+        showMainNavBar:false}
      },
     {
     path: '/main',
@@ -42,7 +43,7 @@ const routes = [
       name: 'AccountDetail',
       component: AccountDetails,
       meta: { showNavBar: false }
-    }
+    },
 ];
 
 const router = createRouter({
