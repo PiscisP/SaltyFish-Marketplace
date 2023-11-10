@@ -44,12 +44,11 @@ export default {
 }
 </script>
 
-<style lang="less" rel= "stylesheet" scoped>
+<style>
 .main-page {
   display: flex;
   flex-direction: column;
   height: 100vh; /* Use the full height of the viewport */
-  position:relative;
 }
 
 .items-grid {

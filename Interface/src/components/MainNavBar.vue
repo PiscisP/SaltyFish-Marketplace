@@ -44,7 +44,7 @@ export default {
   color: white;
   z-index: 1000; /* Ensure it sits above other content */
   height: 60px; /* Example fixed height */
-  position:absolute;
+  position:fixed;
   top: 0; /* Stick to the top of the viewport */
 }
 
