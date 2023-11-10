@@ -1,79 +1,65 @@
 <template>
-  <div class="messages-view">
-    <!-- Message list -->
-    <div class="message-list">
-      <div class="message" v-for="message in messages" :key="message.id" :class="{ 'sender': message.isSender, 'receiver': !message.isSender }">
-        <div class="message-bubble">
-          <div class="message-text">{{ message.text }}</div>
-          <div class="message-time">{{ message.time }}</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Message input area -->
-    <div class="message-input">
-      <input type="text" v-model="newMessage" placeholder="Type a message..." @keyup.enter="sendMessage" />
-      <button @click="sendMessage">Send</button>
+  <div class="main-container">
+    <MainNavBar />
+    <div class="messages-view">
+      <ContactBar @contact-selected="handleContactSelected" />
+      <ChatBox :current-contact="currentContact" />
+      <ItemSideBar />
     </div>
   </div>
 </template>
 
 <script>
+import MainNavBar from '@/components/MainNavBar.vue';
+import ContactBar from '../components/ContactBar.vue';
+import ChatBox from '../components/ChatBox.vue';
+import ItemSideBar from '../components/ItemSideBar.vue';
+
 export default {
-  name: 'MessagesView',
+  components: {
+    ContactBar,
+    ChatBox,
+    ItemSideBar,
+    MainNavBar
+  },
   data() {
     return {
-      newMessage: '',
-      messages: [], // Start with an empty array
+      currentContact: null
     };
   },
   methods: {
-    sendMessage() {
-      if (this.newMessage.trim() !== '') {
-        // Add new message to messages array
-        const currentTime = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-        this.messages.push({
-          id: this.messages.length + 1,
-          text: this.newMessage,
-          time: currentTime,
-          isSender: true, // Assuming the user is always the sender
-        });
-        this.newMessage = ''; // Reset input field
-      }
-    },
-  },
+    handleContactSelected(contact) {
+      this.currentContact = contact;
+    }
+  }
 };
 </script>
 
 <style scoped>
-.messages-view {
+.main-container {
   display: flex;
   flex-direction: column;
-  width: 100%; /* Take up all available width */
-  max-width: 100%; /* Ensure it doesn't overflow */
-  height: 100vh; /* Full viewport height */
-  background-color: #f9f9f9; /* Background color */
-  margin: 0; /* Reset any default margins */
-  padding: 0; /* Reset any default padding */
+  height: 100vh;
 }
 
-.message-list {
-  flex-grow: 1;
-  overflow-y: auto;
-  padding: 10px;
-  height: 100%; /* Take up all available height */
-  width: 100%;
+.messages-view, .messages-view * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Ensures padding does not affect overall width */
 }
 
-/* ... rest of your styles ... */
-
-.message-input {
+.messages-view {
   display: flex;
-  padding: 10px;
-  background-color: #fff;
-  border-top: 1px solid #ccc;
+  height: 100vh;
+  width: 100vw;
+  flex-grow: 1;
 }
 
-/* ... rest of your styles for message-input ... */
+.contact-bar, .item-sidebar {
+  flex: 0 0 16.66%;
+}
 
+.chatbox {
+  flex: 0 0 66.66%;
+}
 </style>
