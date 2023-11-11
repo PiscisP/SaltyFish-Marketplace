@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 @Controller
@@ -20,12 +21,24 @@ public class SqlTestPageController {
 
     private TestMapper testMapper;
 
-    public SqlTestPageController(TestMapper tm){
+    private HttpServletRequest request;
+
+    public String getUserIP() {
+        String ipAddress = request.getHeader("X-Forwarded-For");
+        if (ipAddress == null || ipAddress.isEmpty() || "unknown".equalsIgnoreCase(ipAddress)) {
+            ipAddress = request.getRemoteAddr();
+        }
+        return ipAddress;
+    }
+    public SqlTestPageController(TestMapper tm, HttpServletRequest hsr){
         this.testMapper = tm;
+        this.request = hsr;
     }
     @GetMapping(value = "/test")
     public String test(@ModelAttribute LoginRequest payload , Model model) {
         String message = "";
+
+        message += getUserIP();
 
         List<TestEntity> customers = testMapper.selectAll();
         for (TestEntity te : customers){
@@ -49,7 +62,7 @@ public class SqlTestPageController {
         //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         message = "";
 
-        testMapper.updateCustomerPhone(2, "425 123 4567");
+        testMapper.updateCustomerPhone(2, "10086");
         customers =testMapper.selectByID(2);
         for (TestEntity te : customers){
             message += te.getFirst_name() + " ";
