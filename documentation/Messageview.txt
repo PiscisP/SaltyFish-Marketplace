@@ -1,0 +1,54 @@
+MessageView.vue
+Zhou Lu
+
+MessageView.vue: This file contains the template, script, and style for the main messaging component.
+Template Structure
+The template consists of a div element with the class main-container.
+Inside the main-container, the following child components are included:
+MainNavBar: A navigation bar component.
+ContactBar: A sidebar for displaying contacts.
+ChatBox: The main chat area for displaying messages.
+ItemSideBar: A sidebar for additional information or actions.
+Script
+Imports:
+
+MainNavBar from @/components/MainNavBar.vue
+ContactBar from ../components/ContactBar.vue
+ChatBox from ../components/ChatBox.vue
+ItemSideBar from ../components/ItemSideBar.vue
+Component Name: Not explicitly defined, but implied as MainMessagingComponent.
+
+Components:
+
+MainNavBar, ContactBar, ChatBox, ItemSideBar are registered for use within this component.
+Data Properties:
+
+currentContact: Initially null, this property is meant to hold the currently selected contact's information.
+Methods:
+
+handleContactSelected(contact): Updates currentContact when a contact is selected in the ContactBar.
+Styles
+.main-container:
+
+Uses Flexbox for layout, with a column direction.
+Occupies the full viewport height (100vh).
+.messages-view:
+
+Also uses Flexbox, filling the remaining space after the MainNavBar.
+Sets the height and width to 100vh and 100vw, respectively.
+Ensures all child elements (*) have no margin or padding and use box-sizing: border-box.
+.contact-bar, .item-sidebar:
+
+Both are set to take up 16.66% of the flex container's width.
+.chatbox:
+
+Occupies the central 66.66% of the width.
+Usage
+This component serves as the main interface for a messaging application.
+It integrates various sub-components to provide a complete messaging experience, including contact selection, chat display, and additional sidebar functionalities.
+Customization
+The child components (MainNavBar, ContactBar, ChatBox, ItemSideBar) can be customized or replaced according to specific application needs.
+The layout proportions (width of sidebars and chatbox) can be adjusted in the CSS.
+Integration
+To integrate this component into a Vue.js project, include the MainMessagingComponent.vue file in your components directory.
+Ensure that all child components (MainNavBar, ContactBar, ChatBox, ItemSideBar) are also included in the project and properly imported.

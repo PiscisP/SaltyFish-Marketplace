@@ -1,0 +1,45 @@
+App.vue Documentation
+Zhou Lu
+
+App.vue: The main Vue component that orchestrates the layout and navigation.
+Components
+NavBar: A component for the navigation bar.
+
+Location: ./components/NavBar.vue
+Usage: Displayed on all pages except 'MainPage' and 'account'.
+MainNavBar: (Commented out in the current version)
+
+Location: ./components/MainNavBar.vue
+Usage: Intended to be displayed only on 'MainPage' and 'account'.
+Template Structure
+The template consists of a single div with the id app.
+Conditional rendering is used to display NavBar on all pages except 'MainPage' and 'account'.
+router-view is used for displaying the content of the routed pages.
+Script
+Imports:
+
+NavBar: Imported from ./components/NavBar.vue.
+MainNavBar: Currently commented out.
+Component Name: 'App'
+
+Components:
+
+NavBar: Registered for use within this component.
+MainNavBar: Registration commented out.
+Computed Properties:
+
+showNavBar: Boolean value to control the display of NavBar. It returns true for all routes except 'MainPage' and 'account'.
+showMainNavBar: (Commented out) Intended to control the display of MainNavBar on 'MainPage' and 'account'.
+Styles
+Global Styles:
+The html and body tags are styled to take up the full viewport with no margin or padding.
+The #app element is styled to fill the entire viewport and can include additional styles as needed.
+.main-content: A class intended for main content styling, ensuring it takes up all available space.
+Notes
+The MainNavBar component and its related functionality are currently commented out in the code. If needed, these can be activated by uncommenting the relevant sections.
+Additional styles and components can be added as per the application's requirements.
+Usage
+To use this application, ensure Vue.js is properly set up in your environment.
+Integrate the App.vue component into your Vue.js project.
+Customize the NavBar and MainNavBar components as per your design requirements.
+Define routes in your Vue Router configuration, ensuring that 'MainPage' and 'account' are included if you want to utilize the conditional navigation logic.

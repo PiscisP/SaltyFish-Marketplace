@@ -1,0 +1,42 @@
+BottomNavBar.vue
+Zhou Lu
+
+BottomNavBar.vue: This file contains the template, script, and style for the BottomNavBar component.
+Template Structure
+The template consists of a div element with the class bottom-nav.
+Inside the bottom-nav, there are three button elements, each representing a navigation item:
+A button for navigating to messages, with an icon and a label.
+A button for adding a new item (labeled "Sell").
+A button for navigating to the user's profile, with an icon and a label.
+Script
+Component Name: 'BottomNavBar'
+
+Methods:
+
+goToMessages: Navigates to the 'Messages' view when clicked.
+addNewItem: Placeholder for the logic to add a new item. This could involve opening a modal or redirecting to a new page.
+goToProfile: Navigates to the 'Profile' view when clicked.
+Styles
+.bottom-nav:
+
+Uses Flexbox for layout with justify-content: space-around for equal spacing between items.
+Fixed at the bottom of the page.
+Styled with a background color, height, and padding.
+.nav-item:
+
+Styled as a flex container with a column direction for vertical alignment of icon and text.
+Includes transition effects for background color.
+Font size and padding are adjusted for better visibility and touch targets.
+.nav-item i:
+
+Styles specifically for the icons (assuming FontAwesome is used).
+Font size and margin are set for icon appearance.
+Usage
+This component is used as a fixed navigation bar at the bottom of a web application.
+It provides quick access to commonly used sections of the app, like messages, adding new items (e.g., for a marketplace app), and user profile.
+Customization
+The labels and icons can be changed to suit the specific needs of the application.
+The addNewItem method can be fleshed out with the appropriate logic for the application's functionality.
+Integration
+To integrate this component into a Vue.js project, include the BottomNavBar.vue file in your components directory.
+Import and register BottomNavBar in the parent component or layout where you want it to appear.

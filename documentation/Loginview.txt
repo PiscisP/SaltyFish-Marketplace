@@ -1,0 +1,49 @@
+LoginView.vue
+Zhou Lu
+
+LoginView.vue: This file encompasses the template, script, and style for the LoginView component.
+Template Structure
+The template consists of a div element containing a login form.
+The form includes:
+An h2 element with the text "Login".
+Two input fields for the username (or email) and password.
+A submit button.
+Script
+Component Name: 'LoginView'
+
+Data Properties:
+
+username: String, holds the user's username or email.
+password: String, holds the user's password.
+errorMessage: String, used to store error messages (currently unused in the provided code).
+Methods:
+
+login: A method that gets triggered on form submission. It currently contains a mock login validation that checks if both username and password are provided, then redirects to 'MainPage'.
+Commented Code:
+
+An alternative implementation of the login method using axios for a real backend authentication is commented out. This version includes error handling and response validation.
+Styles
+div:
+
+Centers the form with a width of 300px.
+Adds margin, padding, and border styling.
+h2:
+
+Centers the text.
+input:
+
+Styles for the input fields including width, padding, margin, border, and border-radius.
+button:
+
+Styles for the submit button including width, padding, background color, text color, border, border-radius, and cursor.
+A hover effect is added to change the background color.
+Usage
+This component is used for user login purposes.
+It can be integrated into any Vue.js application that requires user authentication.
+Customization
+The text in the h2 tag and placeholders in input fields can be modified as needed.
+The styling can be adjusted to match the application's design requirements.
+The commented login method can be activated and modified to integrate with a real backend for user authentication.
+Integration
+To integrate this component into a Vue.js project, include the LoginView.vue file in your components directory.
+Import and register LoginView in the parent component or router view where you want it to appear.

@@ -1,0 +1,34 @@
+NavBar.vue
+Zhou Lu
+
+NavBar.vue: This file contains the template, script, and style for the NavBar component.
+Template Structure
+The template consists of a nav element.
+Inside the nav, there are three router-link elements, each providing navigation to different routes:
+A link to the Home page (/).
+A link to the Login page (/login).
+A link to the Register page (/register).
+Script
+Component Name: 'NavBar'
+This component does not have any props, data, computed properties, or methods defined in its script part. It's a simple, static component for navigation.
+Styles
+nav:
+
+Styled with a background color, padding, and text alignment.
+Positioned at the top of the page.
+nav a:
+
+Styles for the anchor tags (links) inside the nav. This includes color, margin, text decoration, and font weight.
+The color is set to white for visibility against the dark background.
+nav a:hover:
+
+A hover effect is added to change the color of the links to a lighter shade for better user interaction feedback.
+Usage
+This component is used as a top navigation bar in a web application.
+It provides quick access to the Home, Login, and Register pages.
+Customization
+The links and their destinations can be changed to suit the specific needs of the application.
+The styling can be adjusted to match the application's design requirements.
+Integration
+To integrate this component into a Vue.js project, include the NavBar.vue file in your components directory.
+Import and register NavBar in the parent component or layout where you want it to appear.

@@ -1,0 +1,38 @@
+ChatBox.vue
+Zhou Lu
+
+ChatBox.vue: This file contains the template, script, and style for the ChatBox component.
+Template Structure
+The template consists of a div element with the class chatbox.
+Inside the chatbox, there are two main sections:
+A div for displaying messages if a currentContact is selected.
+A div showing a prompt to select a contact if no currentContact is selected.
+A div for the message input, allowing the user to type and send a message.
+Script
+Props:
+
+currentContact: An Object representing the currently selected contact. It defaults to null if no contact is selected.
+Data Properties:
+
+newMessage: String, holds the text of the new message to be sent.
+messages: Array, stores the list of messages. Ideally, this should be fetched from a store or API.
+Computed Properties:
+
+filteredMessages: Filters the messages array to show only those that correspond to the currentContact.
+Methods:
+
+sendMessage: Pushes a new message to the messages array and resets newMessage. It only triggers if newMessage is not empty.
+Styles
+.chatbox:
+Uses Flexbox for layout with a column direction.
+Occupies the full height of its container.
+Additional styles can be added as needed.
+Usage
+This component is used within a chat application to display messages with a specific contact and to send new messages.
+It dynamically updates to show messages related to the selected contact.
+Customization
+The appearance of messages and the input field can be customized to match the application's design.
+The data handling can be modified to integrate with a backend service or Vuex store for real-time messaging capabilities.
+Integration
+To integrate this component into a Vue.js project, include the ChatBox.vue file in your components directory.
+It should be used in conjunction with a parent component that manages contacts and passes the currentContact as a prop.

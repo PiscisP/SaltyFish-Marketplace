@@ -1,0 +1,30 @@
+HomeView.vue
+Zhou Lu
+
+HomeView.vue: This file contains the template, script, and style for the HomeView component.
+Template Structure
+The template consists of a div element with the class welcome-container.
+Inside this div, there is an h1 element that displays the welcome message: "Welcome to the SCU Community Marketplace."
+Script
+Component Name: 'HomeView'
+This component does not have any props, data, computed properties, or methods defined in its script part. It's a simple, static component.
+Styles
+.welcome-container:
+
+This class applies styling to the container div.
+It uses Flexbox to center its content both horizontally and vertically.
+The height is set to 10% of the viewport height (10vh), and the width is set to 100%.
+Text alignment is centered, and padding of 20px is applied.
+h1:
+
+The h1 element inside the .welcome-container has a bottom margin of 20px.
+Usage
+This component is designed to be used as a welcoming interface for users entering the SCU Community Marketplace.
+It can be placed on the homepage or any introductory page of the application.
+The component is static and does not require any dynamic data or interaction.
+Customization
+The text inside the h1 tag can be modified to change the welcome message.
+The styling can be adjusted to match the overall design of the application, including changing the font, colors, and layout.
+Integration
+To integrate this component into a Vue.js project, include the HomeView.vue file in your components directory.
+Import and register HomeView in the parent component or router view where you want it to appear.
