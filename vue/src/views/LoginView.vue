@@ -55,13 +55,13 @@ export default {
 </script>
 
 
-<style>
+<style scoped lang="less">
 div {
   justify-content: center;
   align-items: center;
   width: 300px;
   margin: 50px auto;
-  padding: 20px;
+  padding: 20px;  
   border: none;
 }
 
@@ -81,7 +81,7 @@ button {
   width: 100%;
   padding: 10px;
   background-color: #333;
-  color: white;
+  //color: rgb(4, 4, 4);
   border: none;
   border-radius: 3px;
   cursor: pointer;

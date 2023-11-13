@@ -1,9 +1,9 @@
 <template>
   <div class="bottom-nav">
-    <button class="nav-item" @click="goToMessages">
-      <i class="fas fa-comments"></i> <!-- Assuming you're using FontAwesome for icons -->
-      <span>Messages</span>
-    </button>
+    <!-- <button class="nav-item" @click="goToMessages">
+      <i class="fas fa-comments"></i> 
+       <span>Messages</span> --> 
+    <!-- </button> -->
     <button class="nav-item plus" @click="addNewItem">Sell</button>
     <button class="nav-item" @click="goToProfile">
       <i class="fas fa-user"></i> <!-- FontAwesome icon -->
@@ -30,11 +30,11 @@ export default {
 }
 </script>
 
-<style>
+<style scoped lang="less">
 .bottom-nav {
   display: flex;
-  justify-content: space-around; /* Changed to space-around for equal spacing */
-  align-items: center; /* Vertically center the content */
+  justify-content: space-around; 
+  align-items: center; 
   width: 100%;
   position: fixed;
   bottom: 0;
@@ -56,7 +56,7 @@ export default {
   text-align: center;
   border: none;
   background: none;
-  padding: 5px 0; /* Adjusted padding */
+  padding: 5px 0; 
   font-size: 16px;
   transition: background-color 0.3s;
 }
@@ -66,8 +66,4 @@ export default {
   margin-bottom: 5px; /* Space between icon and text */
 }
 
-/* .nav-item.plus {
-  font-size: 20px;
-  color: rgb(255, 255, 255);
-} */
 </style>

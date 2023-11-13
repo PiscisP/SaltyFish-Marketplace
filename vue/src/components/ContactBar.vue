@@ -24,7 +24,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style scoped lang="less">
 .contact-bar {
   background-color: #333;
   color: white;

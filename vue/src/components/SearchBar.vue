@@ -23,7 +23,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="less">
 .search-bar {
   width: 100%;
   padding: 10px 15px; /* Adjust padding as needed */

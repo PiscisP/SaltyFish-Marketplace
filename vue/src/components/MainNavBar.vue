@@ -33,7 +33,7 @@ export default {
 };
 </script>
 
-<style lang="less" rel= "stylesheet" scoped>
+<style lang="less">
 .main-nav-bar {
   display: flex;
   justify-content: space-between;
@@ -44,7 +44,8 @@ export default {
   z-index: 1000; 
   height: 60px; 
   position:fixed;
-  top: 0; /* Stick to the top of the viewport */
+  top: 0; 
+  width: 100%;
 }
 
 /* Additional styles for the search bar */
@@ -54,8 +55,8 @@ export default {
 
 .search-bar input {
   padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+ // border: 1px solid #ccc;
+ // border-radius: 4px;
   font-size: 16px;
 }
 .main-nav-bar button {
@@ -63,5 +64,6 @@ export default {
   font-size: 16px; 
   color: white; 
   width: auto; 
+  background-color: #333;
 }
 </style>

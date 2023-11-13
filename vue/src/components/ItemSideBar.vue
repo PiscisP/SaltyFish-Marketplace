@@ -26,7 +26,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style scoped lang="less">
 .item-sidebar {
   background-color: #f5f5f5;
   color: #333;

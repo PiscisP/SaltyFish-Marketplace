@@ -12,7 +12,7 @@
   };
   </script>
   
-  <style scoped>
+  <style scoped lang="less">
   /* Your CSS for AccountDetail goes here */
   </style>
   

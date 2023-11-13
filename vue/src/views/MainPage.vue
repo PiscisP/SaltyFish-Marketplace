@@ -44,7 +44,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped lang="less">
 html, body {
   margin: 0;
   padding: 0;
@@ -81,15 +81,15 @@ html, body {
   gap: 10px; /* Adjust the gap between items as needed */
   padding: 10px;
   overflow: auto; /* Allows scrolling if content overflows */
-  margin-top: 60px; 
+  margin-top: 0; 
   flex-grow: 1; /* Allows the grid to grow and fill available space */
 }
 
 .item-button {
   padding: 10px;
-  border: 1px solid #ccc;
+  //border: 1px solid #ccc;
   border-radius: 4px;
-  background-color: #f9f9f9;
+  //background-color: #f9f9f9;
   cursor: pointer;
   transition: background-color 0.3s;
 }

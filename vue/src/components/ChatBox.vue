@@ -48,7 +48,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style scoped lang="less">
 .chatbox {
   display: flex;
   flex-direction: column;

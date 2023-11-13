@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <!-- <div id="app"> -->
     <!-- Show NavBar on every page except 'MainPage' and 'account' -->
     
     <!-- Show MainNavBar only on 'MainPage' and 'account' -->
@@ -8,7 +8,7 @@
       <NavBar v-if="showNavBar" />
       <router-view />
     <!-- </div> -->
-  </div>
+  <!-- </div> -->
 </template>
 
 <script>
@@ -34,7 +34,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped lang="less">
 /* Ensure the body takes up the full viewport */
 html, body {
   margin: 0;

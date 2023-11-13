@@ -10,7 +10,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped lang="less">
 .welcome-container {
   display: flex;
   justify-content: center;

@@ -12,7 +12,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped lang="less">
 nav {
   background-color: #333;
   padding: 10px;
