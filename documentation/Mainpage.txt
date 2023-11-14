@@ -1,2 +1,7 @@
 MainPage Documentation
 Ningjun Li
+
+11/13
+Make Changes to ensure the bars fit the overwritten project.
+Fix the style issues,
+But the item detail button need to be changed to EL-icon.
