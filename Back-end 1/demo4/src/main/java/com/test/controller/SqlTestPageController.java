@@ -15,6 +15,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
+import java.util.Map;;
+import java.util.HashMap;
 
 @Controller
 public class SqlTestPageController {
@@ -35,7 +37,7 @@ public class SqlTestPageController {
         this.request = hsr;
     }
     @GetMapping(value = "/test")
-    public String test(@ModelAttribute LoginRequest payload , Model model) {
+    public String test(Model model) {
         String message = "";
 
         message += getUserIP();
@@ -73,8 +75,6 @@ public class SqlTestPageController {
         model.addAttribute("after_update", message);
 
         return "GetHomeSuccess";
-
-
     }
 
 

@@ -1,8 +1,10 @@
 package com.test.controller;
 
 import com.test.base.Result;
+import com.test.dataaccess.mapper.AssetMapper;
 import com.test.request.LoginRequest;
 import com.test.response.User;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -15,6 +17,9 @@ import java.sql.SQLException;
 
 @Controller("/")
 public class LoginController {
+
+    @Autowired
+    private static AssetMapper assetMapper;
 
     @GetMapping(value = "/login")
     public String login(@ModelAttribute LoginRequest payload , Model model) {

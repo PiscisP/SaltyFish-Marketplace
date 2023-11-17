@@ -15,6 +15,7 @@
       <list>
         <option value="HTML File" />
         <option value="FxmlFile" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -58,7 +59,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "Andy",
+    "git-widget-placeholder": "Develop",
     "last_opened_file_path": "C:/Users/zhouh/Desktop/git hub/demo4",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.0",
@@ -67,6 +68,10 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\dev_program\demo4\src\main\resources\mapper\new" />
+      <recent name="D:\dev_program\demo4\src\main\java\com\test\config" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\dev_program\demo4\src\main\resources\mapper" />
       <recent name="D:\dev_program\demo4\src\main\java\com\test\mapper" />
@@ -76,10 +81,6 @@
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.test" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\dev_program\demo4\src\main\resources\mapper\new" />
-      <recent name="D:\dev_program\demo4\src\main\java\com\test\config" />
     </key>
   </component>
   <component name="RunAnythingCache">
