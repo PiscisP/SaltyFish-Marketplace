@@ -4,7 +4,7 @@ import { ElMessage } from "element-plus";
 const defaultError = () => ElMessage.error("Error enountered, please contact Administrator")
 const defaultFailure = (message) => ElMessage.warning(message)
 
-function get(url,data,success, failure = defaultFailure, error = defaultError){
+function post(url,data,success, failure = defaultFailure, error = defaultError){
     axios.post(url,data, {
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded'
