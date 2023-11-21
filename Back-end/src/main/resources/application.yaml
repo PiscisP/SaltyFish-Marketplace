@@ -6,4 +6,21 @@ spring:
     username: root
     password: 123456
   mail:
-    host: 
+    host: smtp.gmail.com
+    port: 465
+    username: lu1371742736@gmail.com
+    password: ctzm dlei jiwl uyao
+
+
+    properties:
+      from: lu1371742736@gmail.com
+      mail:
+        smtp:
+          socketFactory:
+            class: javax.net.ssl.SSLSocketFactory
+
+    data:
+      redis:
+        database: 0
+        host: localhost
+        port: 6379

@@ -24,9 +24,11 @@ public class AuthorizeController {
     AuthorizeService service;
 
     @PostMapping("/valid-email")
-    public RestBean<String> validateEmail(@Pattern(regexp = EMAIL_REGEX) @RequestParam("email") String email){
+    public RestBean<String> validateEmail(@Pattern(regexp = EMAIL_REGEX) @RequestParam("email") String email,HttpSession session){
+        
 
-        if (service.sendValidateEmail(email))
+
+        if (service.sendValidateEmail(email,session.getId()))
             return RestBean.success("Email Sent");
         else
             return RestBean.failure(400, "Email sent failure");
