@@ -1,15 +1,12 @@
 package com.example.service;
-
-import com.example.entity.Account;
-import com.example.mapper.UserMapper;
-import  jakarta.annotation.Resource;
-import org.springframework.security.core.userdetails.User;
 import  org.springframework.security.core.userdetails.UserDetailsService;
-import  org.springframework.security.core.userdetails.UserDetails;
-import  org.springframework.security.core.userdetails.UsernameNotFoundException;
-import  org.springframework.stereotype.Service;
 
-@Service
+
+public interface AuthorizeService extends UserDetailsService{
+    boolean sendValidateEmail(String email);
+}
+
+/*@Service
 public class AuthorizeService implements UserDetailsService{
     @Resource
     UserMapper mapper;
@@ -26,4 +23,4 @@ public class AuthorizeService implements UserDetailsService{
                 .roles("user")
                 .build();
     }
-}
+}*/

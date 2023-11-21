@@ -33,7 +33,7 @@
         <span style="color: grey">No account</span>
     </el-divider>
     <div style="margin-top: 40px">
-         <el-button style="width:250px" type="warning" plain>Register</el-button>
+         <el-button style="width:250px" @click= "router.push('/register')" type="warning" plain>Register</el-button>
     </div>
     </div>
 </template>
@@ -44,6 +44,8 @@ import {User, Lock} from '@element-plus/icons-vue'
 import {reactive} from 'vue';
 import {ElMessage} from "element-plus";
 import {post} from "@/net";
+import router from '@/router';
+
 
 const form = reactive({
     username: '',
@@ -60,9 +62,10 @@ const login = () => {
             password: form.password,
             remember: form.remember
         },(message) =>{
+            //ElMessage.warning("1")
             ElMessage.success(message)
-            router.push('/MainPage')
-        } )
+            router.push('/mainpage')
+        })
     }
 }
 </script>

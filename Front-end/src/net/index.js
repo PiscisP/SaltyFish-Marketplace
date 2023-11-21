@@ -1,32 +1,33 @@
 import axios from "axios";
 import { ElMessage } from "element-plus";
 
-const defaultError = () => ElMessage.error("Error enountered, please contact Administrator")
+const defaultError = () => ElMessage.error("Error encountered, please contact Administrator")
 const defaultFailure = (message) => ElMessage.warning(message)
 
-function post(url,data,success, failure = defaultFailure, error = defaultError){
-    axios.post(url,data, {
+
+function post(url, data, success, failure = defaultFailure, error = defaultError) {
+    axios.post(url, data, {
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded'
         },
         withCredentials: true
-    }).then(({data})=>{
+    }).then(({data}) => {
         if(data.success)
-            success(data.message,data.status)
+            success(data.message, data.status)
         else
-            failure(data.message,data.status)
+            failure(data.message, data.status)
     }).catch(error)
 }
 
-function get(url,success, failure = defaultFailure, error = defaultError){
-    axios.get(url,data, {
+function get(url, success, failure = defaultFailure, error = defaultError) {
+    axios.get(url, {
         withCredentials: true
-    }).then(({data})=>{
+    }).then(({data}) => {
         if(data.success)
-            success(data.message,data.status)
+            success(data.message, data.status)
         else
-            failure(data.message,data.status)
+            failure(data.message, data.status)
     }).catch(error)
 }
 
-export {get,post}
+export { get, post }
