@@ -43,7 +43,7 @@
                     </template>
                 </el-col>
                 <el-col :span="6">
-                    <el-button type="success" @click="validateEmail">Send Code</el-button>
+                    <el-button type="success" @click="validateEmail" :disabled="!isEmailValid || coldTime > 0"> {{ coldTime > 0 ? "Wait for "+ coldTime+" s" : 'Send Code' }}</el-button>
                 </el-col>
             </el-row>
             </el-form-item>
