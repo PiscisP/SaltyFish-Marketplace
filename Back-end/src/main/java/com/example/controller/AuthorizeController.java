@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.sql.Struct;
+
 @Validated
 @RestController
 @RequestMapping("/api/auth")
@@ -27,12 +29,27 @@ public class AuthorizeController {
     public RestBean<String> validateEmail(@Pattern(regexp = EMAIL_REGEX) @RequestParam("email") String email,HttpSession session){
         
 
-
-        if (service.sendValidateEmail(email,session.getId()))
+        String confirm = service.sendValidateEmail(email,session.getId());
+        if (confirm == null)
             return RestBean.success("Email Sent");
         else
-            return RestBean.failure(400, "Email sent failure");
+            return RestBean.failure(400, confirm);
     }
+    @PostMapping("/register")
+    public RestBean<String> registerUser(@Pattern(regexp = USERNAME_REGEX) @Length(min=2, max=8)
+                                             @RequestParam("username")String username,
+                                         @Length(min=6, max=16) @RequestParam("password")String password,
+                                         @Pattern(regexp = EMAIL_REGEX )@RequestParam("email") String email,
+                                         @RequestParam("code") String code,
+                                         HttpSession session){
+        String s = service.validateAndRegister(username,password,email,code,session.getId());
+        if(s==null){
+            return RestBean.success("Register Succeed");
+        }else{
+            return RestBean.failure(400,"Register Fail, Code wrong");
+        }
+    }
+
 
 
 }

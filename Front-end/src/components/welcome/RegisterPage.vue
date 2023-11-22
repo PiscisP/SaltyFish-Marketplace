@@ -7,21 +7,21 @@
     <div style="margin-top: 50px">
         <el-form :model="form" :rules="rules" @validate="onValidate" ref="formRef">
             <el-form-item prop="username">
-                <el-input v-model="form.username" type="text" placeholder="username">
+                <el-input v-model="form.username" :maxlength="8" type="text" placeholder="username">
                     <template #prefix>
                         <el-icon><User /></el-icon>
                     </template>
                  </el-input>
             </el-form-item>
             <el-form-item prop="password">
-                <el-input v-model="form.password" type="text" placeholder="password">
+                <el-input v-model="form.password" :maxlength="16" type="text" placeholder="password">
                     <template #prefix>
                         <el-icon><Lock /></el-icon>
                     </template>
                 </el-input>
             </el-form-item>
             <el-form-item prop="password_repeat">
-                <el-input v-model="form.password_repeat" type="text" placeholder="repeat password" >
+                <el-input v-model="form.password_repeat" :maxlength="16"  type="text" placeholder="repeat password" >
                     <template #prefix>
                         <el-icon><Lock /></el-icon>
                     </template>
@@ -37,7 +37,7 @@
             <el-form-item prop="code">
                 <el-row :gutter= "10" >
                 <el-col :span="16">
-                    <el-input v-model="form.code" type = "code" placeholder="Code"></el-input>
+                    <el-input v-model="form.code" :maxlength="6" type = "code" placeholder="Code"></el-input>
                     <template #prefix>
                          <el-icon><EditPen /></el-icon>
                     </template>
@@ -156,6 +156,7 @@ const validateEmail = () => {
         coldTime.value = 0
     })
 }
+
 
 </script>
 
