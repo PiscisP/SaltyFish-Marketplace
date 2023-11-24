@@ -1,7 +1,6 @@
 package com.example.entity;
 
 import lombok.Data;
-
 @Data
 public class RestBean<T> {
     private int status;
