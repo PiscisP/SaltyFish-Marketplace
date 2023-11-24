@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 
+
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 import java.util.Map;;
@@ -20,7 +21,7 @@ import java.util.HashMap;
 
 @Controller
 public class SqlTestPageController {
-
+/*
     private TestMapper testMapper;
 
     private HttpServletRequest request;
@@ -76,7 +77,7 @@ public class SqlTestPageController {
 
         return "GetHomeSuccess";
     }
-
+*/
 
 }
 

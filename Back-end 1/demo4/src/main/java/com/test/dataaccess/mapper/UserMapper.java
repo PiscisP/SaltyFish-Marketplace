@@ -20,4 +20,10 @@ public interface UserMapper {
             "scu_id = #{scu_id}, password = #{password}, first_name = #{first_name}, last_name = #{last_name} " +
             "WHERE u_id = #{u_id}")
     void updateUser(UserDO user);
+
+    @Select("select * from user where username = #{text} or email= #{text}")
+    UserDO FindAccountByNameOrEmail(String text);
+
+    @Insert("insert into user (email,username,password) values (#{email}, #{username}, #{password})")
+    int createAccount(String username,String password, String email);
 }

@@ -4,7 +4,45 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0420fde1-b75f-4fcf-82cb-d5622caac53e" name="Default Changelist" comment="" />
+    <list default="true" id="0420fde1-b75f-4fcf-82cb-d5622caac53e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../Back-end/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Back-end/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Back-end/src/main/java/com/example/entity/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Back-end/src/main/java/com/example/entity/Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Back-end/src/main/java/com/example/entity/RestBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Back-end/src/main/java/com/example/entity/RestBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/@element-plus_icons-vue.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/@element-plus_icons-vue.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/@element-plus_icons-vue.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/@element-plus_icons-vue.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/_metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/_metadata.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/element-plus_es.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/element-plus_es.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/element-plus_es.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/element-plus_es.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/element-plus_es_components_base_style_css.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/element-plus_es_components_base_style_css.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/element-plus_es_components_base_style_css.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/element-plus_es_components_base_style_css.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/element-plus_es_components_button_style_css.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/element-plus_es_components_button_style_css.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/element-plus_es_components_button_style_css.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/element-plus_es_components_button_style_css.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/element-plus_es_components_checkbox_style_css.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/element-plus_es_components_checkbox_style_css.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/element-plus_es_components_checkbox_style_css.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/element-plus_es_components_checkbox_style_css.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/element-plus_es_components_col_style_css.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/element-plus_es_components_col_style_css.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/element-plus_es_components_col_style_css.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/element-plus_es_components_col_style_css.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/element-plus_es_components_divider_style_css.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/element-plus_es_components_divider_style_css.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/element-plus_es_components_divider_style_css.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/element-plus_es_components_divider_style_css.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/element-plus_es_components_icon_style_css.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/element-plus_es_components_icon_style_css.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/element-plus_es_components_icon_style_css.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/element-plus_es_components_icon_style_css.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/element-plus_es_components_image_style_css.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/element-plus_es_components_image_style_css.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/element-plus_es_components_image_style_css.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/element-plus_es_components_image_style_css.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/element-plus_es_components_input_style_css.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/element-plus_es_components_input_style_css.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/element-plus_es_components_input_style_css.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/element-plus_es_components_input_style_css.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/element-plus_es_components_link_style_css.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/element-plus_es_components_link_style_css.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/element-plus_es_components_link_style_css.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/element-plus_es_components_link_style_css.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/element-plus_es_components_message_style_css.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/element-plus_es_components_message_style_css.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/element-plus_es_components_row_style_css.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/element-plus_es_components_row_style_css.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/element-plus_es_components_row_style_css.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/element-plus_es_components_row_style_css.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/pinia.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/pinia.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/pinia.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/pinia.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/vue-router.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/vue-router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/vue-router.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/vue-router.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/vue.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/vue.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/vue.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/vue.js.map" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,9 +65,8 @@
     <option name="generalSettings">
       <MavenGeneralSettings>
         <option name="alwaysUpdateSnapshots" value="true" />
-        <option name="localRepository" value="D:\apache-maven-3.5.2\repo" />
-        <option name="mavenHome" value="D:/apache-maven-3.5.2" />
-        <option name="userSettingsFile" value="D:\apache-maven-3.5.2\conf\settings.xml" />
+        <option name="localRepository" value="C:\Users\zhouh\Documents\apache-maven-3.9.5\repo" />
+        <option name="userSettingsFile" value="C:\Users\zhouh\Documents\apache-maven-3.9.5\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
     <option name="importingSettings">
@@ -57,18 +94,23 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "Develop",
-    "last_opened_file_path": "C:/Users/zhouh/Desktop/git hub/demo4",
+    "git-widget-placeholder": "develop",
+    "last_opened_file_path": "C:/Users/zhouh/Desktop/SCU Files/Senior/Fall/CSCI 187/Project/Back-end 1/demo4/src/main/resources",
     "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.44984487",
+    "settings.editor.selected.configurable": "MavenSettings"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\zhouh\Desktop\SCU Files\Senior\Fall\CSCI 187\Project\Back-end 1\demo4\src\main\resources" />
       <recent name="D:\dev_program\demo4\src\main\resources\mapper\new" />
       <recent name="D:\dev_program\demo4\src\main\java\com\test\config" />
     </key>
@@ -103,7 +145,7 @@
       </method>
     </configuration>
     <configuration name="WebApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <option name="ALTERNATIVE_JRE_PATH" value="17" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
       <option name="MAIN_CLASS_NAME" value="com.test.WebApplication" />

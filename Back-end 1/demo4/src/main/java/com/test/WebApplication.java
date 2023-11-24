@@ -13,7 +13,7 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 @ComponentScan(basePackages = {"com.test"})
 @MapperScan(basePackages={"com.test.dataaccess.mapper"})
 
-public class WebApplication extends SpringBootServletInitializer {
+public abstract class WebApplication extends SpringBootServletInitializer {
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder application){
         return application.sources(WebApplication.class);
