@@ -34,7 +34,7 @@ export default {
     }, (message) => {
     // Handle the response here
     ElMessage.success("1");
-
+      
     return "print";
     });
 }
