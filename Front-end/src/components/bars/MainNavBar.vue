@@ -8,7 +8,7 @@
     </div>
 
     <div class="account-detail">
-      <router-link to="/account">Account Details</router-link>
+      <router-link to="/profile">Account Details</router-link>
     </div>
   </nav>
 </template>
