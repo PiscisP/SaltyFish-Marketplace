@@ -16,9 +16,11 @@ import  org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import  org.springframework.stereotype.Service;
 
+import java.util.Iterator;
 import java.util.Optional;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
+import java.util.*;
 
 @Service
 public class AuthorizeServiceImpl implements AuthorizeService {
@@ -73,9 +75,25 @@ public class AuthorizeServiceImpl implements AuthorizeService {
     }
     public String validateAndRegister(String username, String password, String email, String code,String sessionId) {
         String key = "email:" + sessionId + ":" + email;
+        System.out.println("Received From user >>   " + code);
+        System.out.println("Key                >>   " + key);
+
+        List<String> keysList = new ArrayList<>();
+        Iterator<String> it = template.keys("email:" + "*").iterator();
+        while (it.hasNext()) {
+            String data = it.next();
+            keysList.add(data);
+        }
+        for (String s : keysList)
+        {
+            System.out.println(" >> " + s);
+        }
+
         if (Boolean.TRUE.equals(template.hasKey(key))) {
             String s= template.opsForValue().get(key);
+            System.out.println("Mine >>   " + s);
             if (s==null) return "Code expire, send request again";
+
             if(s.equals(code)){
                 password = encoder.encode(password);
                 if(mapper.createAccount(username,password,email)>0){

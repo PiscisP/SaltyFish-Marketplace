@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0420fde1-b75f-4fcf-82cb-d5622caac53e" name="Default Changelist" comment="" />
+    <list default="true" id="0420fde1-b75f-4fcf-82cb-d5622caac53e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../reliance/Redis-7.0.14-Windows-x64-with-Service/dump.rdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../reliance/Redis-7.0.14-Windows-x64-with-Service/dump.rdb" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,8 +29,6 @@
     <option name="generalSettings">
       <MavenGeneralSettings>
         <option name="alwaysUpdateSnapshots" value="true" />
-        <option name="localRepository" value="C:\Users\zhouh\Documents\apache-maven-3.9.5\repo" />
-        <option name="userSettingsFile" value="C:\Users\zhouh\Documents\apache-maven-3.9.5\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
     <option name="importingSettings">
