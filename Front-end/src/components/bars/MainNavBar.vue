@@ -8,12 +8,13 @@
     </div>
 
     <div class="account-detail">
-      <router-link to="/account">Account Details</router-link>
+      <router-link to="/profile">Account Details</router-link>
     </div>
   </nav>
 </template>
 
 <script>
+import {post, get} from "@/net";
 export default {
   name: 'MainNavBar',
   data() {
@@ -27,11 +28,18 @@ export default {
       this.$router.go(-1);
     },
     search() {
-      // Logic to perform search
-      console.log('Searching for:', this.searchQuery);
-      // need to implement with backend api later
-    }
-  }
+    get('./api/item/search', {
+    query: this.searchQuery, // Use this.searchQuery instead of searchQuery
+    filter: ""
+    }, (message) => {
+    // Handle the response here
+    ElMessage.success("1");
+      
+    return "print";
+    });
+}
+
+}
 };
 </script>
 

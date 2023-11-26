@@ -24,6 +24,11 @@ const router = createRouter({
       path: '/mainpage',
       name: 'mainpage',
       component: () => import('@/views/MainPage.vue')
+    },
+    {
+     path: '/profile',
+     name: 'profile',
+     component: () => import('@/views/ProfileView.vue')
     }
   ]
 })

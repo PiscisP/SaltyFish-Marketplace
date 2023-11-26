@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+    <meta charset="UTF-8" />
+    <title>LoginSuccess</title>
+    <head></head>
+    <body>
+        <h1> Hello, World!</h1>
+        <div th:text="${message}"></div>
+        <div th:if="${result}">
+            <h2>User Info:</h2>
+            <p th:text="'Username: ' + ${result.data.username}"></p>
+            <p th:text="'Name: ' + ${result.data.name}"></p>
+            <p th:text="'Age: ' + ${result.data.age}"></p>
+            <p th:text="'Code: ' + ${result.code}"></p>
+        </div>
+    </body>
+</html>
+
