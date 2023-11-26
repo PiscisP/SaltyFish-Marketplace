@@ -10,7 +10,7 @@
           @click="goToItemDetail(item.id)"
         >
           {{ item.name }}
-        </button>
+        </button> 
       </div>
     </div>
   </template>

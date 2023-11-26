@@ -4,36 +4,7 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0420fde1-b75f-4fcf-82cb-d5622caac53e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/@element-plus_icons-vue.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/@element-plus_icons-vue.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/_metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/_metadata.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/element-plus_es.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/element-plus_es.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/element-plus_es.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/element-plus_es.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/element-plus_es_components_base_style_css.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/element-plus_es_components_base_style_css.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/element-plus_es_components_button_style_css.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/element-plus_es_components_button_style_css.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/element-plus_es_components_button_style_css.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/element-plus_es_components_button_style_css.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/element-plus_es_components_checkbox_style_css.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/element-plus_es_components_checkbox_style_css.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/element-plus_es_components_checkbox_style_css.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/element-plus_es_components_checkbox_style_css.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/element-plus_es_components_col_style_css.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/element-plus_es_components_col_style_css.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/element-plus_es_components_col_style_css.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/element-plus_es_components_col_style_css.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/element-plus_es_components_divider_style_css.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/element-plus_es_components_divider_style_css.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/element-plus_es_components_divider_style_css.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/element-plus_es_components_divider_style_css.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/element-plus_es_components_icon_style_css.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/element-plus_es_components_icon_style_css.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/element-plus_es_components_icon_style_css.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/element-plus_es_components_icon_style_css.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/element-plus_es_components_image_style_css.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/element-plus_es_components_image_style_css.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/element-plus_es_components_image_style_css.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/element-plus_es_components_image_style_css.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/element-plus_es_components_input_style_css.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/element-plus_es_components_input_style_css.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/element-plus_es_components_input_style_css.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/element-plus_es_components_input_style_css.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/element-plus_es_components_link_style_css.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/element-plus_es_components_link_style_css.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/element-plus_es_components_link_style_css.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/element-plus_es_components_link_style_css.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/element-plus_es_components_row_style_css.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/element-plus_es_components_row_style_css.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/element-plus_es_components_row_style_css.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/element-plus_es_components_row_style_css.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/pinia.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/pinia.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/pinia.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/pinia.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/vue-router.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/vue-router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/vue-router.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/vue-router.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/vue.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Front-end/node_modules/.vite/deps/vue.js" afterDir="false" />
-    </list>
+    <list default="true" id="0420fde1-b75f-4fcf-82cb-d5622caac53e" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -81,22 +52,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/zhouh/Desktop/SCU Files/Senior/Fall/CSCI 187/Project/Back-end 1/demo4/src/main/resources",
-    "project.structure.last.edited": "SDK",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.44984487",
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/zhouh/Desktop/SCU Files/Senior/Fall/CSCI 187/Project/Back-end 1/demo4/src/main/resources&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDK&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.44984487&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\zhouh\Desktop\SCU Files\Senior\Fall\CSCI 187\Project\Back-end 1\demo4\src\main\resources" />
