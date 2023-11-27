@@ -1,19 +1,19 @@
 <template>
 <div class="main-page">
-    <MainNavBar />
+    <!-- <MainNavBar /> -->
     <!-- <BottomNavBar /> -->
     <div style="flex: 1;">
       <div class="carousel">
         <el-carousel height="300px">
           <el-carousel-item v-for="(item,index) in carouselList.slice(0,4)" :key="index">
             <div class="carousel-box">
-              <img :src="item" alt="二手" style="width: 50%;height: 100%;"/>
-              <img :src="carouselList[index+4]" alt="二手" style="width: 50%;height: 100%;"/>
+              <img :src="item" alt="second-hand-img" style="width: 50%;height: 100%;"/>
+              <img :src="carouselList[index+4]" alt="second-hand-img" style="width: 50%;height: 100%;"/>
             </div>
           </el-carousel-item>
         </el-carousel>
         <div class="index-body">
-          <h1>推荐好物</h1>
+            <h1 class="custom-header">Most-viewed items</h1>
           <y-card :list="listRecommend"></y-card>
         </div>
       </div>
@@ -52,35 +52,36 @@
   .carousel-box {
     position: relative;
     height: 100%;
+    padding: 20px;
   }
   
   .index-body {
     margin-top: 20px;
   }
+  .custom-header {
+  padding: 10px;
+}
   
   .card-container {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-column-gap: 20px;
     grid-row-gap: 20px;
+    background-color:rgba(0,0,0,0.1);
+    background: url("https://www.scu.edu/media/offices/umc/Mission-Exterior-01-1160x652.png") center center no-repeat;
+  background-size: cover; 
+  background-attachment: fixed;
+  
+    padding: 20px;
   }
   
   .card-bottom {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    
   }
   
-  /* .main-page {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100vh; 
-   background: url("https://www.scu.edu/media/offices/umc/Mission-Exterior-01-1160x652.png") center center no-repeat;
-   background-size: cover;  
-
-  position: fixed;
-} */
 
 .main-page::before {
   content: '';
