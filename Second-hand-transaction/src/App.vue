@@ -23,8 +23,8 @@ const wantClick = ()=>{
 
 <template>
   <router-view v-if="$route.meta.isLogin"></router-view>
-  <router-view v-if="$route.meta.isAdmin"></router-view>
-  <!-- <div v-else>
+  <!-- <router-view v-if="$route.meta.isAdmin"></router-view> -->
+  <div v-else>
     <el-container style="min-height: 100vh">
       <el-header style="padding: 0;">
         <y-header v-if="!$route.meta.isLogin"></y-header>
@@ -36,7 +36,7 @@ const wantClick = ()=>{
         <y-footer></y-footer>
       </el-footer>
     </el-container>
-  </div> -->
+  </div>
 
 
   <el-dialog
