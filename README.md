@@ -6,7 +6,7 @@ Second-hand-transaction文件
 
 运行：npm run dev
 
-注意：login.vue文件需要改动，不然会有问题，编辑器CTRL+F搜“qq号”把这三个字改个人qq，当然，随意，毕竟毕业设计写的low
+
 
 ### 后端代码
 
