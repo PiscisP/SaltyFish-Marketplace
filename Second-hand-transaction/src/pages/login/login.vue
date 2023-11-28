@@ -12,7 +12,7 @@
         <div class="login-box" style= "margin-top: 150px">
           <div v-loading="loading" class="login-container">
             <h1 style="text-align: center; margin-bottom: 50px;">{{ isLoginForm ? '登录' : '注册' }}</h1>
-            <el-form :model="formLogin" label-width="120px" size="large" v-show="isLoginForm && !isAdminLogin" :rules="rules">
+            <el-form :model="formLogin" label-width="120px" size="large" v-show="isLoginForm " :rules="rules">
               <el-form-item label="用户名" prop="name">
                 <el-input v-model="formLogin.name" placeholder="请输入用户名" clearable/>
               </el-form-item>
@@ -20,7 +20,7 @@
                 <el-input v-model="formLogin.password" type="password" show-password placeholder="请输入密码" clearable/>
               </el-form-item>
             </el-form>
-            <el-form :model="formRegister" label-width="120px" size="large" v-show="!isLoginForm && !isAdminLogin" :rules="rulesRegister">
+            <el-form :model="formRegister" label-width="120px" size="large" v-show="!isLoginForm " :rules="rulesRegister">
               <el-form-item label="学校" prop="school">
                 <el-input v-model="formRegister.school" placeholder="请输入学校" clearable/>
               </el-form-item>
@@ -37,12 +37,12 @@
                 <el-input v-model="formRegister.againPassword" type="password" show-password placeholder="请确认密码" clearable/>
               </el-form-item>
             </el-form>
-            <div v-show="isAdminLogin" style="text-align: center;" v-loading="codeLoading">
+            <!-- <div v-show="isAdminLogin" style="text-align: center;" v-loading="codeLoading">
               <img src="@/assets/images/login.png" style="width: 200px; height: 200px;" alt="" @click="loginQQ"/>
-            </div>
+            </div> -->
             <div style="text-align: right; margin-top: 50px;">
               <div class="login-btn">
-                <el-button type="text" size="large" @click="adminLogin">{{ !isAdminLogin ? '管理员登录' : '用户登录' }}</el-button>
+                <!-- <el-button type="text" size="large" @click="adminLogin">{{ !isAdminLogin ? '管理员登录' : '用户登录' }}</el-button> -->
                 <el-button type="text" size="large" @click="isLoginForm = !isLoginForm">{{ isLoginForm ? '还没有账号？注册' : '去登录' }}</el-button>
               </div>
               <div>
@@ -54,7 +54,7 @@
         </div>
       </div>
     </div>
-    <el-dialog v-model="dialogVisible" width="90%" @close="adminLoginClose">
+    <!-- <el-dialog v-model="dialogVisible" width="90%" @close="adminLoginClose">
       <div style="height: 70vh">
         <div>
           <img src="@/assets/qq-login-title.png" style="width: 100%;"/>
@@ -79,7 +79,7 @@
           </div>
         </div>
       </div>
-    </el-dialog>
+    </el-dialog> -->
   </div>
 </template>
 
@@ -110,7 +110,7 @@ const store = userStore();
 const loading = ref(false)
 const codeLoading = ref(false)
 
-const isAdminLogin = ref(false)
+// const isAdminLogin = ref(false)
 
 const isLoginForm = ref(true)
 const formLogin = reactive({
@@ -142,14 +142,15 @@ const submitFormLogin = async () => {
   })
       .then(function (response) {
         if (response.data.code === 200) {
-          if(response.data.data[0].gender === 1){
-            ElMessage.warning("账号封禁中，请联系管理员")
-          }else{
+          // if(response.data.data[0].gender === 1){
+          //   ElMessage.warning("账号封禁中，请联系管理员")
+          // }else{
             ElMessage.success("登录成功")
             push('/')
             store.setUserInfo(response.data.data);
           }
-        } else {
+        // } 
+        else {
           ElMessage.error("登录失败," + response.data.message)
         }
       })
@@ -228,81 +229,81 @@ const submitFormRegister = async () => {
 let timer = null;
 let tipsTimer = true;
 // 管理员登录
-const adminLogin = () => {
-  isAdminLogin.value = !isAdminLogin.value;
-}
+// const adminLogin = () => {
+//   isAdminLogin.value = !isAdminLogin.value;
+// }
 
 
-const dialogVisible = ref(false)
+// const dialogVisible = ref(false)
 
-const loginQQ = async()=>{
-  codeLoading.value = true;
-  setTimeout(()=>{
-    dialogVisible.value = true;
-    codeLoading.value = false;
-  },2000)
-  if(isAdminLogin.value){
-    codeLoading.value = true;
-    setTimeout(()=>{
-      setTimeout(() => {
-        if (timer) {
-          clearInterval(timer);
-          ElMessage.error("登录超时，请手动刷新页面")
-        }
-      }, 30000)
+// const loginQQ = async()=>{
+//   codeLoading.value = true;
+//   setTimeout(()=>{
+//     dialogVisible.value = true;
+//     codeLoading.value = false;
+//   },2000)
+//   if(isAdminLogin.value){
+//     codeLoading.value = true;
+//     setTimeout(()=>{
+//       setTimeout(() => {
+//         if (timer) {
+//           clearInterval(timer);
+//           ElMessage.error("登录超时，请手动刷新页面")
+//         }
+//       }, 30000)
 
-      timer = setInterval(() => {
-        axios.post('http://localhost:5000/admin/islogin').then(async (res) => {
-          console.log("登录中...")
-          const list = res.data.data.list
-          if (list.length > 0) {
-            clearInterval(timer)
-            timer = null;
-            if (list[0].qq === 'qq号') {
-              ElMessage.success("登录成功！！！")
-              sessionStorage.setItem('admin',list[0].qq)
-              await push('/admin')
-              console.log("qq", list[0].qq)
-            } else {
-              ElMessage.error("登录失败，您不是管理员")
-            }
-          }
-        });
-        // http://localhost:5000/admin/islogin;
-      }, 500)
-    },1000)
-  }else {
-    clearInterval(timer)
-    timer = null;
-  }
-}
+//       timer = setInterval(() => {
+//         axios.post('http://localhost:5000/admin/islogin').then(async (res) => {
+//           console.log("登录中...")
+//           const list = res.data.data.list
+//           if (list.length > 0) {
+//             clearInterval(timer)
+//             timer = null;
+//             if (list[0].qq === 'qq号') {
+//               ElMessage.success("登录成功！！！")
+//               sessionStorage.setItem('admin',list[0].qq)
+//               await push('/admin')
+//               console.log("qq", list[0].qq)
+//             } else {
+//               ElMessage.error("登录失败，您不是管理员")
+//             }
+//           }
+//         });
+//         // http://localhost:5000/admin/islogin;
+//       }, 500)
+//     },1000)
+//   }else {
+//     clearInterval(timer)
+//     timer = null;
+//   }
+// }
 
-const formLabelAlign = reactive({
-  name: '',
-  pwd: ''
-})
+// const formLabelAlign = reactive({
+//   name: '',
+//   pwd: ''
+// })
 
-const onlogin = () => {
-  if (formLabelAlign.name === 'qq号' && formLabelAlign.pwd ===
-      'admin123') {
-    axios.post('http://localhost:5000/admin/login',{
-      qq: formLabelAlign.name
-    }).then(res => {
-      console.log(res)
-    })
-  } else {
-  }
-}
+// const onlogin = () => {
+//   if (formLabelAlign.name === 'qq号' && formLabelAlign.pwd ===
+//       'admin123') {
+//     axios.post('http://localhost:5000/admin/login',{
+//       qq: formLabelAlign.name
+//     }).then(res => {
+//       console.log(res)
+//     })
+//   } else {
+//   }
+// }
 
-const adminLoginClose = ()=>{
-  ElMessage.error("登录失败")
-}
+//  const adminLoginClose = ()=>{
+//    ElMessage.error("登录失败")
+//  }
 
-onBeforeUnmount(() => {
-  if (timer) {
-    clearInterval(timer);
-  }
-})
+// onBeforeUnmount(() => {
+//   if (timer) {
+//     clearInterval(timer);
+//   }
+// })
 
 
 </script>
@@ -343,6 +344,6 @@ onBeforeUnmount(() => {
 }
 
 .el-container.is-vertical {
-  display: none; /* This will hide the element */
+  display: none; 
 }
 </style>
