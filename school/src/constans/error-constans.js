@@ -1,7 +1,7 @@
 /* 开发这套程序的人 English不是很好  */
 
 const MYSQL_ERROR = 'database error';
-const ADMIN_ALREADY_EXISIT = 'admin already exists ';
+// const ADMIN_ALREADY_EXISIT = 'admin already exists ';
 const USERNAME_ALREADY_EXISIT = 'username already exists';
 const PASSWORD_ERROR = 'password error';
 const ACCOUNT_NOT_EXISIT = 'account not exists';
@@ -33,7 +33,7 @@ module.exports = {
   ACCOUNT_NOT_EXISIT,
   ARTICLE_NOT_EXISIT,
   LINKS_ALERY_EXISITS,
-  ADMIN_ALREADY_EXISIT,
+  // ADMIN_ALREADY_EXISIT,
   ROLE_NAME_ALERY_EXISIT,
   USERNAME_ALREADY_EXISIT,
   ACCOUNT_TOO_LONG_OR_TOO_SHORT,

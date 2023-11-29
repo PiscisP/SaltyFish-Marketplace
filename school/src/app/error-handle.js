@@ -7,10 +7,10 @@ const errorHandle = (error, ctx) => {
       status = 400;
       message = '您在执行数据库操作时出错啦！！！';
       break;
-    case errorTypes.ADMIN_ALREADY_EXISIT:
-      status = 409;
-      message = '您的账号已经存在啦！！！';
-      break;
+    // case errorTypes.ADMIN_ALREADY_EXISIT:
+    //   status = 409;
+    //   message = '您的账号已经存在啦！！！';
+    //   break;
     case errorTypes.USERNAME_ALREADY_EXISIT:
       status = 409;
       message = '您的用户名已经存在啦！！！';

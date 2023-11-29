@@ -1,6 +1,6 @@
 /* 后台管理类相关接口 */
 const Router = require('koa-router');
-const { verifyUapValid } = require('../middleware/admin.middleware');
+const { verifyUapValid } = require('../middleware/users.middleware');
 const { verifyUsernameExisit } = require('../middleware/users.middleware');
 const {
   createUser,

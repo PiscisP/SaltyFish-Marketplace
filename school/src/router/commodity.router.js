@@ -19,7 +19,4 @@ commodityRouter.post('/update', updateW);
 commodityRouter.post('/update/recommend', updateCommodityList);
 commodityRouter.post('/update/isrelease', updateCommodityListIR);
 commodityRouter.post('/delete',  deleteCommodityList);
-
-
-
 module.exports = commodityRouter;

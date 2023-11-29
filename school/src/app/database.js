@@ -21,14 +21,14 @@ const connections = mysql.createPool({
 });
 
 // 仅开发模式存在
-connections.getConnection((err, conn) => {
-  conn.connect((err) => {
-    if (err) {
-      console.log('MySql数据库连接失败：', err);
-    } else {
-      console.log('MySql数据库连接成功');
-    }
-  });
-});
+// connections.getConnection((err, conn) => {
+//   conn.connect((err) => {
+//     if (err) {
+//       console.log('MySql数据库连接失败：', err);
+//     } else {
+//       console.log('MySql数据库连接成功');
+//     }
+//   });
+// });
 
 module.exports = connections.promise();
