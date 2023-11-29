@@ -13,25 +13,25 @@
         <el-icon>
           <house/>
         </el-icon>
-        首页
+        Homepage
       </el-menu-item>
       <el-menu-item index="class">
         <el-icon>
           <search/>
         </el-icon>
-        分类查询
+        Classification
       </el-menu-item>
       <el-menu-item index="publish">
         <el-icon>
           <plus/>
         </el-icon>
-        发布商品
+        Post items
       </el-menu-item>
       <el-menu-item index="want_to_buy">
         <el-icon>
           <shopping-cart/>
         </el-icon>
-        求购
+        Want items
       </el-menu-item>
     </el-menu>
     <div class="user">
@@ -46,12 +46,12 @@
             </el-icon>
           </template>
           <div>
-            <h3>账号信息：</h3>
-            <div>账号：{{store.userInfo[0]?.username}}</div>
-            <div>学校：{{store.userInfo[0]?.school}}</div>
-            <div>电话号码：{{store.userInfo[0]?.phone}}</div>
-            <div>介绍：{{store.userInfo[0]?.introduction}}</div>
-            <div style="text-align: right;" type="text"><el-button type="primary" @click="logout">退出登录</el-button></div>
+            <h3>Account Detail: </h3>
+            <div>Username: {{store.userInfo[0]?.username}}</div>
+            <div>School: {{store.userInfo[0]?.school}}</div>
+            <div>Phone: {{store.userInfo[0]?.phone}}</div>
+            <div>Description: {{store.userInfo[0]?.introduction}}</div>
+            <div style="text-align: right;" type="text"><el-button type="primary" @click="logout">Logout</el-button></div>
           </div>
         </el-popover>
       </div>
