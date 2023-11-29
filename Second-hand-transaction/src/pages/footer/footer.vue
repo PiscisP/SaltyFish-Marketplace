@@ -1,6 +1,6 @@
 <template>
   <div class="footer">
-    Copyright © 2022 校园二手交易平台 liying&nbsp;&nbsp;|&nbsp;&nbsp;<a href="tencent://Message/?Uin=1474396676&websiteName=qzone.qq.com&Menu=yes">联系我</a>
+    Copyright © 2023 SaltyFish
   </div>
 </template>
 
