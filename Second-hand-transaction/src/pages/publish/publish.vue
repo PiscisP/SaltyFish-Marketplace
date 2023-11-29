@@ -6,17 +6,17 @@
         label-width="120px"
         size="large"
     >
-      <el-form-item label="商品图片" prop="img">
+      <el-form-item label="Item image" prop="img">
         <el-upload action="#" list-type="picture-card" :auto-upload="false" :limit="1" @remove="handleRemove" @change="onchange" >
           <el-icon>
             <Plus/>
           </el-icon>
         </el-upload>
       </el-form-item>
-      <el-form-item label="商品名称" prop="name">
-        <el-input v-model="ruleForm.name" placeholder="请输入商品名称" clearable/>
+      <el-form-item label="Item name" prop="name">
+        <el-input v-model="ruleForm.name" placeholder="Please enter the name of item" clearable/>
       </el-form-item>
-      <el-form-item label="商品价格" prop="price">
+      <el-form-item label="Item price" prop="price">
         <el-input-number
             v-model="ruleForm.price"
             :min="0"
@@ -24,7 +24,7 @@
             style="width: 100%"
         />
       </el-form-item>
-      <el-form-item label="商品类型" prop="type">
+      <el-form-item label="Item type" prop="type">
         <el-radio-group v-model="ruleForm.type">
           <el-radio :label="item.type" v-for="(item,index) in classification.slice(1,10)" :key="index">{{
               item.title
@@ -32,17 +32,17 @@
           </el-radio>
         </el-radio-group>
       </el-form-item>
-      <el-form-item label="联系人" prop="seller">
-        <el-input v-model="ruleForm.seller" placeholder="请输入联系人" clearable/>
+      <el-form-item label="Contact" prop="seller">
+        <el-input v-model="ruleForm.seller" placeholder="Please enter contact person" clearable/>
       </el-form-item>
-      <el-form-item label="交易地址" prop="address">
-        <el-input v-model="ruleForm.address" placeholder="请输入交易地址" type="textarea"/>
+      <el-form-item label="Transaction address" prop="address">
+        <el-input v-model="ruleForm.address" placeholder="Please enter the Transaction address" type="textarea"/>
       </el-form-item>
-      <el-form-item label="商品描述" prop="desc">
-        <el-input v-model="ruleForm.desc" placeholder="请输入商品描述" type="textarea"/>
+      <el-form-item label="Item description" prop="desc">
+        <el-input v-model="ruleForm.desc" placeholder="Please enter the item description" type="textarea"/>
       </el-form-item>
       <el-form-item>
-        <el-button type="primary" @click="submitForm(ruleFormRef)" style="width: 100%">发布
+        <el-button type="primary" @click="submitForm(ruleFormRef)" style="width: 100%">Post
         </el-button
         >
       </el-form-item>
@@ -99,18 +99,18 @@ let ruleForm = reactive({
 
 const rules = reactive({
   name: [
-    {required: true, message: '请输入商品名称', trigger: 'blur'}
+    {required: true, message: 'Please enter item name', trigger: 'blur'}
   ],
-  price: [{required: true, message: '请输入商品价格', trigger: 'blur'}],
+  price: [{required: true, message: 'Please enter Item price', trigger: 'blur'}],
   type: [
-    {required: true, message: '请选择商品类型', trigger: 'change',},
+    {required: true, message: 'Please choose item type', trigger: 'change',},
   ],
-  seller: [{required: true, message: '请输入联系人', trigger: 'blur',},],
+  seller: [{required: true, message: 'Please eneter the contact person', trigger: 'blur',},],
   address: [
-    {required: true, message: '请输入交易地址', trigger: 'blur',},
+    {required: true, message: 'Please enter the transaction address', trigger: 'blur',},
   ],
   desc: [
-    {required: true, message: '请输入商品秒速', trigger: 'blur'},
+    {required: true, message: 'Please enter the item description', trigger: 'blur'},
   ],
 })
 
@@ -128,7 +128,7 @@ const submitForm = async () => {
     description: ruleForm.desc
   }).then(res=>{
     if(res.data.code === 200){
-      ElMessage.success("发布成功！！待管理员审核...")
+      ElMessage.success("Post succeed...")
       ruleForm.seller = '';
       ruleForm.price = 0;
       ruleForm.type = '';
@@ -137,7 +137,7 @@ const submitForm = async () => {
       ruleForm.desc = '';
     }
   }).catch(error=>{
-    ElMessage.error("发布失败")
+    ElMessage.error("Post fail")
   })
 }
 

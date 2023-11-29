@@ -3,33 +3,33 @@
     <el-card style="padding: 0">
       <template #header>
         <div class="header">
-          <h3>个人信息</h3>
-          <el-button type="text" size="large" @click="updateShow = true">修改</el-button>
+          <h3>Personal Info</h3>
+          <el-button type="text" size="large" @click="updateShow = true">Edit</el-button>
         </div>
       </template>
-      <div>账号：{{ store.userInfo[0]?.username }}</div>
-      <div>学校：{{ userInfo[0].school || store.userInfo[0]?.school }}</div>
-      <div>电话号码：{{ userInfo[0].phone || store.userInfo[0]?.phone }}</div>
-      <div>介绍：{{ userInfo[0].introduction || store.userInfo[0]?.introduction }}</div>
+      <div>Username: {{ store.userInfo[0]?.username }}</div>
+      <div>School: {{ userInfo[0].school || store.userInfo[0]?.school }}</div>
+      <div>Phone: {{ userInfo[0].phone || store.userInfo[0]?.phone }}</div>
+      <div>Description: {{ userInfo[0].introduction || store.userInfo[0]?.introduction }}</div>
       <el-tabs v-model="active" style="margin-top: 50px" @tab-click="handleClick">
-        <el-tab-pane label="我的发布" :name="0">
+        <el-tab-pane label="My post" :name="0">
           <el-tabs v-model="activeDetails1" tab-position="left" v-if="listPublish.length > 0">
-            <el-tab-pane label="已通过" name="yi">
+            <el-tab-pane label="Approved" name="yi">
               <y-card :list="listPublish1" :myself="true" @del-click="deletePublish1"></y-card>
             </el-tab-pane>
-            <el-tab-pane label="未通过" name="wei">
+            <el-tab-pane label="Denied" name="wei">
               <y-card :list="listPublish0" :myself="true" @del-click="deletePublish0"></y-card>
             </el-tab-pane>
           </el-tabs>
 
           <div v-if="listPublish.length === 0" style="text-align: center;">
             <img src="@/assets/images/no-goods.png" style="width: 200px;height: 200px" alt="">
-            <p>您暂时还什么都没有发布哟</p>
+            <p>You have not posted anything</p>
           </div>
         </el-tab-pane>
-        <el-tab-pane label="我的求购" :name="1">
+        <el-tab-pane label="My wants" :name="1">
           <el-tabs v-model="activeDetails2" tab-position="left" v-if="listWantToBuy.length > 0">
-            <el-tab-pane label="已通过" name="yi">
+            <el-tab-pane label="Approved" name="yi">
               <div class="need-box">
                 <el-card v-for="(item,index) in listWantToBuy1" :key="index">
                   <div>{{ item.goods }}</div>
@@ -38,9 +38,9 @@
                   <template #header>
                     <div class="need-footer">
                       <div>{{ item.name }}</div>
-                      <el-popconfirm title="确认删除该商品吗？" @confirm="ondelete(item.id)">
+                      <el-popconfirm title="Confirm delete?" @confirm="ondelete(item.id)">
                         <template #reference>
-                          <el-button type="text">删除</el-button>
+                          <el-button type="text">Delete</el-button>
                         </template>
                       </el-popconfirm>
                     </div>
@@ -48,7 +48,7 @@
                 </el-card>
               </div>
             </el-tab-pane>
-            <el-tab-pane label="未通过" name="wei">
+            <el-tab-pane label="Denied" name="wei">
               <div class="need-box">
                 <el-card v-for="(item,index) in listWantToBuy0" :key="index">
                   <div>{{ item.goods }}</div>
@@ -57,9 +57,9 @@
                   <template #header>
                     <div class="need-footer">
                       <div>{{ item.name }}</div>
-                      <el-popconfirm title="确认删除该商品吗？" @confirm="ondelete(item.id)">
+                      <el-popconfirm title="Confirm delete?" @confirm="ondelete(item.id)">
                         <template #reference>
-                          <el-button type="text">删除</el-button>
+                          <el-button type="text">Delete</el-button>
                         </template>
                       </el-popconfirm>
                     </div>
@@ -70,21 +70,21 @@
           </el-tabs>
           <div v-if="listWantToBuy.length === 0" style="text-align: center;">
             <img src="@/assets/images/no-goods.png" style="width: 200px;height: 200px" alt="">
-            <p>您暂时还什么都没有发布哟</p>
+            <p>You have not posted anything</p>
           </div>
         </el-tab-pane>
-        <el-tab-pane label="我的信息" :name="2">
+        <el-tab-pane label="My info" :name="2">
           <el-timeline>
             <el-timeline-item :timestamp="item.create_time" placement="top" v-for="(item,index) in messageList"
                               :key="item.id">
               <el-card>
                 <p>{{ item.text }}</p>
-                <el-button type="text" @click="onDeleteMessage(item.id)">删除信息</el-button>
+                <el-button type="text" @click="onDeleteMessage(item.id)">Delete info</el-button>
               </el-card>
             </el-timeline-item>
             <el-timeline-item placement="top" v-if="messageList.length === 0">
               <el-card>
-                <p>暂无消息...</p>
+                <p>No info yet...</p>
               </el-card>
             </el-timeline-item>
           </el-timeline>
@@ -99,23 +99,23 @@
         width="50%"
     >
       <template #title>
-        <h2>修改个人信息</h2>
+        <h2>Edit personal info</h2>
       </template>
       <div>
         <el-form :model="updateForm" label-width="120px" size="large">
-          <el-form-item label="学校" prop="school">
-            <el-input v-model="updateForm.school" placeholder="请输入学校" clearable/>
+          <el-form-item label="School" prop="school">
+            <el-input v-model="updateForm.school" placeholder="Please enter your school" clearable/>
           </el-form-item>
-          <el-form-item label="电话号码" prop="phone">
-            <el-input v-model="updateForm.phone" placeholder="请输入电话号码" clearable/>
+          <el-form-item label="Phone" prop="phone">
+            <el-input v-model="updateForm.phone" placeholder="Please enter your phone number" clearable/>
           </el-form-item>
-          <el-form-item label="个人介绍" prop="introduction">
-            <el-input v-model="updateForm.introduction" placeholder="请输入个人介绍" clearable/>
+          <el-form-item label="Personal info" prop="introduction">
+            <el-input v-model="updateForm.introduction" placeholder="Please enter your personal info" clearable/>
           </el-form-item>
         </el-form>
       </div>
       <template #footer>
-        <el-button type="primary" @click="UserInfoSubmit" size="large" style="width: 100%">保存</el-button>
+        <el-button type="primary" @click="UserInfoSubmit" size="large" style="width: 100%">Save</el-button>
       </template>
     </el-dialog>
 
@@ -184,7 +184,7 @@ const UserInfoSubmit = async () => {
     introduction: updateForm.introduction
   }).then(res => {
     if (res.data.code === 200) {
-      ElMessage.success("更新成功")
+      ElMessage.success("Update succeed")
       userInfo.value = [{
         age: store.userInfo[0].age,
         createAt: store.userInfo[0].createAt,
@@ -199,10 +199,10 @@ const UserInfoSubmit = async () => {
       }];
       store.updateUserInfo(userInfo.value)
     } else {
-      ElMessage.error("更新失败")
+      ElMessage.error("Update fail")
     }
   }).catch(error => {
-    ElMessage.error("更新失败")
+    ElMessage.error("Update fail")
   }).finally(() => {
     updateShow.value = false;
   })
@@ -224,14 +224,14 @@ const deletePublish = async (id)=>{
     id
   }).then(res=>{
     if(res.data.code === 200){
-      ElMessage.success("删除成功")
+      ElMessage.success("Delete succeed")
       alert(1)
       list.value = list.value.filter(v => v.id !== id)
     }else {
-      ElMessage.error("删除失败")
+      ElMessage.error("Delete fail")
     }
   }).catch(error=>{
-    ElMessage.error("删除失败")
+    ElMessage.error("Delete fail")
   })
 }
 const deletePublish1 = id =>{
@@ -252,7 +252,7 @@ const ondelete = async (id) => {
     id
   }).then(res => {
     if (res.data.code === 200) {
-      ElMessage.success("删除成功")
+      ElMessage.success("Delete succeed")
       if (activeDetails2.value === 'yi') {
         listWantToBuy1.value = listWantToBuy1.value.filter(v => v.id !== id);
       }
@@ -261,10 +261,10 @@ const ondelete = async (id) => {
       }
       // tableData.value = tableData.value.filter(v => v.id !== id);
     } else {
-      ElMessage.error("删除失败")
+      ElMessage.error("Delete fail")
     }
   }).catch(error => {
-    ElMessage.error("删除失败")
+    ElMessage.error("Delete fail")
   })
 }
 
@@ -275,7 +275,7 @@ const onDeleteMessage = async (id) => {
     id
   }).then(response => {
     if (response.data.code === 200) {
-      ElMessage.success("删除成功")
+      ElMessage.success("Delete succeed")
       messageList.value = messageList.value.filter(v => v.id !== id);
     }
   })

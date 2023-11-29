@@ -1,8 +1,8 @@
 <template>
   <div style="background-color: white;flex: 1;padding: 20px">
     <div class="search">
-      <el-input v-model="search" size="large" placeholder="search" clearable style="flex: 1" />
-      <el-button type="primary" size="large" @click="onsearch" style="width: 120px">检索</el-button>
+      <el-input v-model="search" size="large" placeholder="请搜索" clearable style="flex: 1" />
+      <el-button type="primary" size="large" @click="onsearch" style="width: 120px">search</el-button>
     </div>
     <el-tabs tab-position="left" @tab-change="onchange">
       <el-tab-pane :label="item.title" v-for="(item,index) in tabs" :key="index">
@@ -62,7 +62,7 @@ const searchList = (str, container)=> {
   const startChar = str.charAt(0);
   //start
   const strLen = str.length;
-  //search for length
+  //search for
 
   for (let i = 0; i < container.length; i++) {
     const obj = container[i];
