@@ -1,8 +1,8 @@
 <template>
   <div style="background-color: white;flex: 1;padding: 20px">
     <div class="search">
-      <el-input v-model="search" size="large" placeholder="请搜索" clearable style="flex: 1" />
-      <el-button type="primary" size="large" @click="onsearch" style="width: 120px">检索</el-button>
+      <el-input v-model="search" size="large" placeholder="Please search" clearable style="flex: 1" />
+      <el-button type="primary" size="large" @click="onsearch" style="width: 120px">Search</el-button>
     </div>
     <el-tabs tab-position="left" @tab-change="onchange">
       <el-tab-pane :label="item.title" v-for="(item,index) in tabs" :key="index">
@@ -10,7 +10,7 @@
           <y-card :list="list" v-if="list.length>0"></y-card>
           <div class="classification-no-goods" v-else>
             <img src="@/assets/images/no-goods.png" alt="none">
-            <div>暂无商品，您可以先发布噢！</div>
+            <div>No item yet</div>
           </div>
         </div>
       </el-tab-pane>
@@ -58,11 +58,11 @@ const onchange = (v)=>{
 
 const searchList = (str, container)=> {
   const newList = [];
-  //新的列表
+
   const startChar = str.charAt(0);
-  //开始字符
+
   const strLen = str.length;
-  //查找符串的长度
+
 
   for (let i = 0; i < container.length; i++) {
     const obj = container[i];
