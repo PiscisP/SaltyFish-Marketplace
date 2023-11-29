@@ -37,10 +37,10 @@
         <el-form-item label="Item name" prop="name">
           <el-input v-model="needForm.name" placeholder="Please enter the name of the item, which can be described"  type="textarea" clearable/>
         </el-form-item>
-        <el-form-item label="Contact person" prop="buyer">
+        <el-form-item label="Buyer" prop="buyer">
           <el-input v-model="needForm.buyer" placeholder="Please enter a contact person" clearable/>
         </el-form-item>
-        <el-form-item label="Trading Address" prop="address">
+        <el-form-item label="Trade Address" prop="address">
           <el-input v-model="needForm.address" placeholder="Please enter the transaction address" type="textarea"/>
         </el-form-item>
       </el-form>
