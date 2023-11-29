@@ -115,7 +115,7 @@ const rules = reactive({
 })
 
 const submitForm = async () => {
-  //
+
   await axios.post("http://localhost:5000/commodity",{
     userId: store.userInfo[0].id,
     seller: ruleForm.seller,

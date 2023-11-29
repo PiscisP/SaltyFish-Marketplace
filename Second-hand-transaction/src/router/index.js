@@ -56,42 +56,42 @@ const routes = [
             isLogin: true
         }
     },
-    {
-        path: "/admin",
-        name: "admin",
-        component:  LazyRouter('/admin/admin'),
-        children: [
-            {
-                path: "user",
-                name: "user",
-                component:  LazyRouter('/admin/user-management/user'),
-                meta: {
-                    title: "user-manage"
-                }
-            },
-            {
-                path: "goods",
-                name: "goods",
-                component:  LazyRouter('/admin/goods-management/goods'),
-                meta: {
-                    title: "item-manage"
-                }
-            },
-            {
-                path: "want",
-                name: "want",
-                component:  LazyRouter('/admin/want-to-buy/buy'),
-                meta: {
-                    title: "item-manage"
-                }
-            }
-        ],
-        meta:{
-            title: "login-salty-fish",
-            isAdmin: true
-        },
-        redirect: '/admin/user'
-    }
+    // {
+    //     path: "/admin",
+    //     name: "admin",
+    //     component:  LazyRouter('/admin/admin'),
+    //     children: [
+    //         {
+    //             path: "user",
+    //             name: "user",
+    //             component:  LazyRouter('/admin/user-management/user'),
+    //             meta: {
+    //                 title: "user-manage"
+    //             }
+    //         },
+    //         {
+    //             path: "goods",
+    //             name: "goods",
+    //             component:  LazyRouter('/admin/goods-management/goods'),
+    //             meta: {
+    //                 title: "item-manage"
+    //             }
+    //         },
+    //         {
+    //             path: "want",
+    //             name: "want",
+    //             component:  LazyRouter('/admin/want-to-buy/buy'),
+    //             meta: {
+    //                 title: "item-manage"
+    //             }
+    //         }
+    //     ],
+    //     meta:{
+    //         title: "login-salty-fish",
+    //         isAdmin: true
+    //     },
+    //     redirect: '/admin/user'
+    // }
     // {
     //     path: "/:pathMatch(.*)*",
     //     name: "404",
