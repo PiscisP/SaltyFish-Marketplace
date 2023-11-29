@@ -2,8 +2,8 @@
 <div style="flex: 1;background-color: white;padding: 20px">
   <el-card style="margin-bottom: 20px;">
     <div class="need-title">
-      <div>找不到想要的物品？求购一下吧！也欢迎大家来帮助他们❤</div>
-      <div><el-button type="primary" @click="dialogVisible = true">发布求购</el-button></div>
+      <div>Can't find the item you want? Ask for a purchase! And feel free to help them out </div>
+      <div><el-button type="primary" @click="dialogVisible = true">Post want</el-button></div>
     </div>
   </el-card>
   <div class="need-box">
@@ -15,7 +15,7 @@
         <div class="need-footer">
           <div>{{ item.name }}</div>
           <div>
-            <el-button type="primary" @click="help(item.phone)">帮助他（她）</el-button>
+            <el-button type="primary" @click="help(item.phone)">Help</el-button>
           </div>
         </div>
       </template>
@@ -24,7 +24,7 @@
 
   <el-dialog
       v-model="dialogVisible"
-      title="发布求购"
+      title="Post Want"
       width="30%"
   >
     <div>
@@ -34,19 +34,19 @@
           label-width="120px"
           size="large"
       >
-        <el-form-item label="商品名称" prop="name">
-          <el-input v-model="needForm.name" placeholder="请输入商品名称，可以加以描述"  type="textarea" clearable/>
+        <el-form-item label="Item name" prop="name">
+          <el-input v-model="needForm.name" placeholder="Please enter the name of the item, which can be described"  type="textarea" clearable/>
         </el-form-item>
-        <el-form-item label="联系人" prop="buyer">
-          <el-input v-model="needForm.buyer" placeholder="请输入联系人" clearable/>
+        <el-form-item label="Contact person" prop="buyer">
+          <el-input v-model="needForm.buyer" placeholder="Please enter a contact person" clearable/>
         </el-form-item>
-        <el-form-item label="交易地址" prop="address">
-          <el-input v-model="needForm.address" placeholder="请输入交易地址" type="textarea"/>
+        <el-form-item label="Trading Address" prop="address">
+          <el-input v-model="needForm.address" placeholder="Please enter the transaction address" type="textarea"/>
         </el-form-item>
       </el-form>
     </div>
     <template #footer>
-      <el-button type="primary" style="width: 100%" @click="onsubmit">发布</el-button>
+      <el-button type="primary" style="width: 100%" @click="onsubmit">publish</el-button>
     </template>
   </el-dialog>
 
@@ -80,11 +80,11 @@ const help = phone =>{
 
 const rules = reactive({
   name: [
-    {required: true, message: '请输入商品名称', trigger: 'blur'}
+    {required: true, message: 'Please enter the name of the item', trigger: 'blur'}
   ],
-  buyer: [{required: true, message: '请输入联系人', trigger: 'blur',},],
+  buyer: [{required: true, message: 'Please enter a contact person', trigger: 'blur',},],
   address: [
-    {required: true, message: '请输入交易地址', trigger: 'blur',},
+    {required: true, message: 'Please enter the transaction address', trigger: 'blur',},
   ]
 })
 
@@ -105,12 +105,12 @@ const onsubmit = async ()=>{
     address: needForm.address
   }).then(response =>{
     if(response.data.code === 200){
-      ElMessage.success("发布成功，待管理员审核...")
+      ElMessage.success("Post succeed...")
     }else{
-      ElMessage.error("发布失败")
+      ElMessage.error("Post fail")
     }
   }).catch(error=>{
-    ElMessage.error("发布失败")
+    ElMessage.error("Post fail")
   }).finally(()=>{
     dialogVisible.value = false
   })
