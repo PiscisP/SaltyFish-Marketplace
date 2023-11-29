@@ -78,7 +78,7 @@ const loading = ref(false)
 const isLogin = ref(false)
 
 
-const username = ref('用户')
+const username = ref('user')
 
 const handleSelect = (k) => {
   push('/' + k)

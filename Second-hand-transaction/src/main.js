@@ -8,11 +8,11 @@ import 'element-plus/dist/index.css'
 
 app.use(ElementPlus, { size: 'small', zIndex: 3000 })
 // app.use(ElementPlus)
-//配置路由
+//set up user
 app.use(router);
 router.beforeEach((to, from, next) => {
 
-    /* 路由发生变化修改页面title */
+    /* change title when router change*/
     if (to.meta.title) {
         document.title = to.meta.title
     }
@@ -21,7 +21,7 @@ router.beforeEach((to, from, next) => {
     }else if (localStorage.getItem('userinfo')){
         next();
     } else {
-        ElMessage.error("请先登录")
+        ElMessage.error("please login first")
         next('/login')
     }
 

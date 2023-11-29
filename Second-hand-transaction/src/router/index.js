@@ -1,6 +1,6 @@
 import { createRouter,createWebHistory} from "vue-router";
 import {LazyRouter} from "../utils"
-// 路由信息
+// router information
 const routes = [
     {
         path: "/",
@@ -11,7 +11,7 @@ const routes = [
         name: "home",
         component:  LazyRouter('/index'),
         meta:{
-            title: "首页——校园二手交易网站",
+            title: "SaltyFish Marketplace",
             requireAuth: false
         }
     },
@@ -20,7 +20,7 @@ const routes = [
         name: "class",
         component:  LazyRouter('/classification/classification'),
         meta:{
-            title: "分类——校园二手交易网站"
+            title: "classification-saltyfish"
         }
     },
     {
@@ -28,7 +28,7 @@ const routes = [
         name: "publish",
         component:  LazyRouter('/publish/publish'),
         meta:{
-            title: "发布——校园二手交易网站"
+            title: "publish-saltyfish"
         }
     },
     {
@@ -36,7 +36,7 @@ const routes = [
         name: "want_to_buy",
         component:  LazyRouter('/want_to_buy/want_to_buy'),
         meta:{
-            title: "求购——校园二手交易网站"
+            title: "want-to-buy-salty-fish"
         }
     },
     {
@@ -44,7 +44,7 @@ const routes = [
         name: "info",
         component:  LazyRouter('/personal-info/info'),
         meta:{
-            title: "个人中心——校园二手交易网站"
+            title: "personal center-salty-fish"
         }
     },
     {
@@ -52,7 +52,7 @@ const routes = [
         name: "login",
         component:  LazyRouter('/login/login'),
         meta:{
-            title: "登录——校园二手交易网站",
+            title: "login-salty-fish",
             isLogin: true
         }
     },
@@ -66,7 +66,7 @@ const routes = [
                 name: "user",
                 component:  LazyRouter('/admin/user-management/user'),
                 meta: {
-                    title: "用户管理"
+                    title: "user-manage"
                 }
             },
             {
@@ -74,7 +74,7 @@ const routes = [
                 name: "goods",
                 component:  LazyRouter('/admin/goods-management/goods'),
                 meta: {
-                    title: "商品管理"
+                    title: "item-manage"
                 }
             },
             {
@@ -82,12 +82,12 @@ const routes = [
                 name: "want",
                 component:  LazyRouter('/admin/want-to-buy/buy'),
                 meta: {
-                    title: "商品管理"
+                    title: "item-manage"
                 }
             }
         ],
         meta:{
-            title: "登录——校园二手交易网站",
+            title: "login-salty-fish",
             isAdmin: true
         },
         redirect: '/admin/user'
@@ -100,7 +100,7 @@ const routes = [
 
 ];
 
-// 导出路由
+// export router
 const router = createRouter({
     history: createWebHistory(),
     routes

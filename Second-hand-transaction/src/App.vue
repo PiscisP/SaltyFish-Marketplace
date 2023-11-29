@@ -45,7 +45,7 @@ const wantClick = ()=>{
   >
     <template #title>
       <div class="dialog-title">
-        <h1>商品详情</h1>
+        <h1>Item details</h1>
       </div>
     </template>
     <div>
@@ -53,7 +53,7 @@ const wantClick = ()=>{
         <div class="app-card-body">
           <div style="position: relative">
             <div class="app-enlarge">
-              <el-button type="text" :icon="Search" @click="bigImg = true">点击查看大图</el-button>
+              <el-button type="text" :icon="Search" @click="bigImg = true">Click to see details</el-button>
             </div>
             <img
                 :src="store.goodsInfo.image"
@@ -76,8 +76,8 @@ const wantClick = ()=>{
     </div>
     <template #footer>
       <div class="app-dialog-footer" v-if="!store.myself">
-        <span style="color: red;text-align:left;">温馨提示：为保证商品质量及安全，网站暂时只支持线下交互，点击我想要即可复制卖家的联系方式</span>
-        <el-button :icon="ChatDotSquare" round @click="wantClick">我想要</el-button>
+        <span style="color: red;text-align:left;">Warm tips: To ensure the quality and safety of goods, the site temporarily only supports offline interaction, click I want to copy the seller's contact information!</span>
+        <el-button :icon="ChatDotSquare" round @click="wantClick">want</el-button>
       </div>
     </template>
   </el-dialog>

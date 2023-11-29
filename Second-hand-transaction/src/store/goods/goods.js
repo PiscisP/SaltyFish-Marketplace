@@ -38,7 +38,7 @@ export const goodsStore = defineStore('goods', {
         }
     },
 
-    // 开启数据缓存
+    // data cache
     persist: {
         enabled: false,
         strategies: [
