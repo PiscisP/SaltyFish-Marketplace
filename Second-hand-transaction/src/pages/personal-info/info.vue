@@ -259,7 +259,6 @@ const ondelete = async (id) => {
       if (activeDetails2.value === 'wei') {
         listWantToBuy0.value = listWantToBuy0.value.filter(v => v.id !== id);
       }
-      // tableData.value = tableData.value.filter(v => v.id !== id);
     } else {
       ElMessage.error("Delete fail")
     }

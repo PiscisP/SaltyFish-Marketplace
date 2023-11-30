@@ -15,8 +15,5 @@ const commodityRouter = new Router({
 commodityRouter.post('/', createCommodity);
 commodityRouter.get('/all', inquireCommodityList);
 commodityRouter.get('/createWantToBuyGoods', createWantToBuyGoodsController);
-// commodityRouter.post('/update', updateW);
-// commodityRouter.post('/update/recommend', updateCommodityList);
-// commodityRouter.post('/update/isrelease', updateCommodityListIR);
 commodityRouter.post('/delete',  deleteCommodityList);
 module.exports = commodityRouter;

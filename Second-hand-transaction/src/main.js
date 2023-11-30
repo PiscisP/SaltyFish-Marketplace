@@ -7,7 +7,6 @@ import ElementPlus ,{ElMessage} from 'element-plus'
 import 'element-plus/dist/index.css'
 
 app.use(ElementPlus, { size: 'small', zIndex: 3000 })
-// app.use(ElementPlus)
 //set up user
 app.use(router);
 router.beforeEach((to, from, next) => {

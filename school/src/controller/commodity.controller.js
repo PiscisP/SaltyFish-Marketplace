@@ -5,10 +5,8 @@ const {
   inquireCommodityListData,
   inquireCommodityCarListData,
   selectAllGoods,
-  // updateWantGoods,
   createWantToBuyGoods,
-  updateCommodityListData,
-  // updateCommodityListDataIR,
+  // updateCommodityListData,
   deleteCommodityListData,
   deleteWantBuyListData
 } = require('../service/commodity.service');
@@ -45,36 +43,6 @@ class CommodityController {
       return errorFunction(MYSQL_ERROR, ctx);
     }
   }
-  // Modify item
-  // async updateCommodityList(ctx, next) {
-  //   const {id,recommend} = ctx.request.body;
-  //   try {
-  //     const result = await updateCommodityListData(id,recommend);
-  //     //return logic
-  //     ctx.body = {
-  //       code: 200,
-  //       message: `Successfully modified! !`,
-  //       success: true
-  //     };
-  //   } catch (err) {
-  //     return errorFunction(MYSQL_ERROR, ctx);
-  //   }
-  // }
-  //update item
-  // async updateCommodityListIR(ctx, next) {
-  //   const {id,isrelease} = ctx.request.body;
-  //   try {
-  //     const result = await updateCommodityListDataIR(id,isrelease);
-  //     //return logic
-  //     ctx.body = {
-  //       code: 200,
-  //       message: `Edit succeed! !`,
-  //       success: true
-  //     };
-  //   } catch (err) {
-  //     return errorFunction(MYSQL_ERROR, ctx);
-  //   }
-  // }
   // Delete item
   async deleteCommodityList(ctx, next) {
     const {id} = ctx.request.body;
@@ -134,24 +102,6 @@ class CommodityController {
       return errorFunction(MYSQL_ERROR, ctx);
     }
   }
-  // Update want to buy
-  // async updateW(ctx,next){
-  //   // updateWantGoods
-  //   const {id,through} = ctx.request.body;
-  //   try {
-  //     const result = await updateWantGoods(+id,+through);
-  //     console.log("result: ",result);
-  //     //return logic
-  //     ctx.body = {
-  //       code: 200,
-  //       message: `Update succeed`,
-  //       success: true
-  //     };
-  //   } catch (err) {
-  //     return errorFunction(MYSQL_ERROR, ctx);
-  //   }
-  // }
-
   // deleteWantBuyListData
   async delWantBuyController(ctx,next){
     // updateWantGoods
