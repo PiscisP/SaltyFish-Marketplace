@@ -5,10 +5,10 @@ const {
   inquireCommodityListData,
   inquireCommodityCarListData,
   selectAllGoods,
-  updateWantGoods,
+  // updateWantGoods,
   createWantToBuyGoods,
   updateCommodityListData,
-  updateCommodityListDataIR,
+  // updateCommodityListDataIR,
   deleteCommodityListData,
   deleteWantBuyListData
 } = require('../service/commodity.service');

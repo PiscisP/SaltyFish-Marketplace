@@ -4,7 +4,7 @@ const {
   userAdminLoginData,
   allUser,
   userGender,
-  updateWantGoods,
+  // updateWantGoods,
   updateUserInfo,
   selectUserMessage,
   deleteUserMessage,
