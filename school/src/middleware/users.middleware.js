@@ -6,12 +6,12 @@ const verifyUapValid = async (ctx, next) => {
     if (!username || !password) {
       return errorFunction(USERNAME_OR_ACCOUNT_PASSWORD_NOT_NULL, ctx);
     }
-    // 用户账号必须在5-16位以内
+    // The user account should be within 5-16 texts
     const verifyAccountRule = /^\w{5,16}$/.test(username);
     if (!verifyAccountRule) {
       return errorFunction(ACCOUNT_TOO_LONG_OR_TOO_SHORT, ctx);
     }
-    // 用户密码必须同时包括数字跟英文字符，并在6-18位以内
+    // User password must include both numbers and English characters, and must be within 6-18 characters
     const verifyPasswordRule = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,18}$/.test(
       password
     );
@@ -20,16 +20,16 @@ const verifyUapValid = async (ctx, next) => {
     }
     await next();
   };
-// 验证用户名是否存在
+// Verify username exists
 const verifyUsernameExisit = async (ctx, next) => {
   const { username } = ctx.request.body;
   try {
     const result = await inquireusernameData(username);
-   // 如果存在则抛出错误
+   // Throws an error if it exists
     // if (result.length > 0) {
     //   return errorFunction(ADMIN_ALREADY_EXISIT, ctx);
     // }
-    // 如果不存在则进入下一个中间件
+    // If it does not exist, go to the next middleware
     await next();
   } catch (err) {
     return errorFunction(MYSQL_ERROR, ctx);

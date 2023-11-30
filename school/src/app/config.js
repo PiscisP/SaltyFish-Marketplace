@@ -1,4 +1,4 @@
-/* 环境变量配置文件 */
+/* Environment variable configuration file */
 const dotenv = require('dotenv');
 dotenv.config();
 

@@ -1,7 +1,7 @@
 const connection = require('../app/database');
 const { USERS_TABLE, CAR_TABLE ,NEED_TABLE,MESSAGE_TABLE} = require('../constans/service_table');
 class UsersService {
-  //用户注册
+  //user register
   async createUserData(
     username,
     password,
@@ -27,7 +27,7 @@ class UsersService {
       throw Error(err);
     }
   }
-  //查询管理员账户是否存在
+  //check if admin account exist
   async inquireusernameData(username) {
     const statement = `SELECT * FROM ${USERS_TABLE} WHERE username = ?`;
     try {
@@ -37,7 +37,7 @@ class UsersService {
       throw Error(err);
     }
   }
-  // 加入购物车
+  // add to shopping car
   async createCommodityCarData(userId, commodityId) {
     try {
       const statement = `INSERT INTO ${CAR_TABLE} (userId,commodityId) VALUE (?,?)`;
@@ -47,7 +47,7 @@ class UsersService {
       throw Error(err);
     }
   }
-  // 用户登录
+  // user login
   async userAdminLoginData(username, password) {
     try {
       const statement = `SELECT * FROM ${USERS_TABLE} WHERE username = ? AND password = ?`;
@@ -57,7 +57,7 @@ class UsersService {
       throw Error(err);
     }
   }
-  // 查询所有用户
+  // search all users
   async allUser(){
     try {
       const statement = `SELECT id,username,school,phone,introduction,createAt,gender FROM ${USERS_TABLE}`;
@@ -67,7 +67,7 @@ class UsersService {
       throw Error(err);
     }
   }
-  // 更新用户
+  // update user
   async userGender(id,gender){
     // ;
     try {
@@ -79,7 +79,7 @@ class UsersService {
       throw Error(err);
     }
   }
-  // 更新用户信息
+  // updae user info
   async updateUserInfo(id,school,phone,introduction){
     try {
       const statement = `UPDATE ${USERS_TABLE} SET school="${school}" , phone="${phone}" , introduction="${introduction}" WHERE id=${id}`;
@@ -90,7 +90,7 @@ class UsersService {
       throw Error(err);
     }
   }
-  // 更新求购商品
+  // update want to buy
   // async updateWantGoods(id,through){
   //   const statement = `UPDATE ${NEED_TABLE} SET through=${through} WHERE id=${id}`;
   //   const result = await connection.execute(statement,[]);
@@ -98,7 +98,7 @@ class UsersService {
   // } catch (err) {
   //   throw Error(err);
   // }
-  // 查询所有消息
+  // search all message
   async selectUserMessage(id){
     try {
       const statement = `SELECT * FROM ${MESSAGE_TABLE} WHERE userid=${id}`;
@@ -108,7 +108,7 @@ class UsersService {
       throw Error(err);
     }
   }
-  // 删除用户信息DELETE FROM school_message WHERE userid=1
+  //Delete user info  DELETE FROM school_message WHERE userid=1
   async deleteUserMessage(id){
     try {
       const statement = `DELETE FROM ${MESSAGE_TABLE} WHERE id=${id}`;
@@ -118,7 +118,7 @@ class UsersService {
       throw Error(err);
     }
   }
-  // 新增信息
+  // add info
   async createMessage(userid,message) {
     try {
       const statement = `INSERT INTO ${MESSAGE_TABLE} VALUE (null,${userid},"${message}",NOW())`;

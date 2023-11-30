@@ -13,16 +13,16 @@ const {
   deleteWantBuyListData
 } = require('../service/commodity.service');
 class CommodityController {
-  // 发布订单
+  // Post item
   async createCommodity(ctx, next) {
     const { userId,seller, phone, price, image, type,address, title, description } =
       ctx.request.body;
     try {
       const result = await createCommodity(userId,seller, phone, price, image, type,address, title, description);
-      //返回逻辑
+      //return logic
       ctx.body = {
         code: 200,
-        message: `发布成功！！`,
+        message: `Posted successfully! !`,
         success: true
       };
       return result;
@@ -30,13 +30,13 @@ class CommodityController {
       return errorFunction(MYSQL_ERROR, ctx);
     }
   }
-  // 查询商品列表
+  // Query item list
   async inquireCommodityList(ctx, next) {
     const result = await inquireCommodityListData();
-    //返回逻辑
+    //return logic
     ctx.body = {
       code: 200,
-      message: `查询成功！！`,
+      message: `search successful! !`,
       success: true,
       data: result
     };
@@ -45,58 +45,58 @@ class CommodityController {
       return errorFunction(MYSQL_ERROR, ctx);
     }
   }
-  // 修改商品
+  // Modify item
   // async updateCommodityList(ctx, next) {
   //   const {id,recommend} = ctx.request.body;
   //   try {
   //     const result = await updateCommodityListData(id,recommend);
-  //     //返回逻辑
+  //     //return logic
   //     ctx.body = {
   //       code: 200,
-  //       message: `修改成功！！`,
+  //       message: `Successfully modified! !`,
   //       success: true
   //     };
   //   } catch (err) {
   //     return errorFunction(MYSQL_ERROR, ctx);
   //   }
   // }
-  //更新商品
+  //update item
   // async updateCommodityListIR(ctx, next) {
   //   const {id,isrelease} = ctx.request.body;
   //   try {
   //     const result = await updateCommodityListDataIR(id,isrelease);
-  //     //返回逻辑
+  //     //return logic
   //     ctx.body = {
   //       code: 200,
-  //       message: `修改成功！！`,
+  //       message: `Edit succeed! !`,
   //       success: true
   //     };
   //   } catch (err) {
   //     return errorFunction(MYSQL_ERROR, ctx);
   //   }
   // }
-  // 删除商品
+  // Delete item
   async deleteCommodityList(ctx, next) {
     const {id} = ctx.request.body;
     try {
       const result = await deleteCommodityListData(id);
-      //返回逻辑
+      //return logic
       ctx.body = {
         code: 200,
-        message: `删除成功！！`,
+        message: `Delete Succeed! !`,
         success: true
       };
     } catch (err) {
       return errorFunction(MYSQL_ERROR, ctx);
     }
   }
-  // 查询加购的购物车列表
+  // Search commoditycart list of additional purchases
   async inquireCommodityCarList(ctx) {
     try {
       const result = await inquireCommodityCarListData();
       ctx.body = {
         code: 200,
-        message: `查询成功！！`,
+        message: `Search succeed!!`,
         success: true,
         data: result
       };
@@ -104,13 +104,13 @@ class CommodityController {
       return errorFunction(MYSQL_ERROR, ctx);
     }
   }
-  // 查询求购列表
+  // Search want to buy list
   async selectAllGoodsController(ctx) {
     try {
       const result = await selectAllGoods();
       ctx.body = {
         code: 200,
-        message: `查询成功`,
+        message: `Search succeed!!`,
         success: true,
         data: result
       };
@@ -118,33 +118,33 @@ class CommodityController {
       return errorFunction(MYSQL_ERROR, ctx);
     }
   }
-  // 发布求购
+  // Post want to buy
   async createWantToBuyGoodsController(ctx, next) {
     const { userid, name, goods, address } = ctx.request.body;
     try {
       const result = await createWantToBuyGoods(userid, name, goods, address);
       console.log(result)
-      //返回逻辑
+      //return logic
       ctx.body = {
         code: 200,
-        message: `发布成功！！`,
+        message: `Post succeed!!`,
         success: true
       };
     } catch (err) {
       return errorFunction(MYSQL_ERROR, ctx);
     }
   }
-  // 更新求购
+  // Update want to buy
   // async updateW(ctx,next){
   //   // updateWantGoods
   //   const {id,through} = ctx.request.body;
   //   try {
   //     const result = await updateWantGoods(+id,+through);
   //     console.log("result: ",result);
-  //     //返回逻辑
+  //     //return logic
   //     ctx.body = {
   //       code: 200,
-  //       message: `更新成功！！`,
+  //       message: `Update succeed`,
   //       success: true
   //     };
   //   } catch (err) {
@@ -152,17 +152,17 @@ class CommodityController {
   //   }
   // }
 
-  // 删除求购 deleteWantBuyListData
+  // deleteWantBuyListData
   async delWantBuyController(ctx,next){
     // updateWantGoods
     const {id} = ctx.request.body;
     try {
       const result = await deleteWantBuyListData(+id);
       console.log("result: ",result);
-      //返回逻辑
+      //return logic
       ctx.body = {
         code: 200,
-        message: `删除成功！！`,
+        message: `Delete Succeed! !`,
         success: true
       };
     } catch (err) {
