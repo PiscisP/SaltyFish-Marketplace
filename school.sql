@@ -54,7 +54,7 @@ CREATE TABLE `school_commodity`  (
   `userId` int(10) UNSIGNED NOT NULL COMMENT 'user ID',
   `recommend` int(255) NOT NULL DEFAULT 0 COMMENT 'Recommend or not',
   `seller` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT 'seller name',
-  `isrelease` int(255) NULL DEFAULT 0 COMMENT 'publish or not ',
+  `isrelease` int(255) NULL DEFAULT 1 COMMENT 'publish or not ',
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 25 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 

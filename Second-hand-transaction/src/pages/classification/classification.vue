@@ -1,7 +1,7 @@
 <template>
   <div style="background-color: white;flex: 1;padding: 20px">
     <div class="search">
-      <el-input v-model="search" size="large" placeholder="请搜索" clearable style="flex: 1" />
+      <el-input v-model="search" size="large" placeholder="Please Search" clearable style="flex: 1" />
       <el-button type="primary" size="large" @click="onsearch" style="width: 120px">search</el-button>
     </div>
     <el-tabs tab-position="left" @tab-change="onchange">

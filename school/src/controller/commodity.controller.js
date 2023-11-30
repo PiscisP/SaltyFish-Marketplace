@@ -60,7 +60,7 @@ class CommodityController {
       return errorFunction(MYSQL_ERROR, ctx);
     }
   }
-  //
+  //更新商品
   async updateCommodityListIR(ctx, next) {
     const {id,isrelease} = ctx.request.body;
     try {

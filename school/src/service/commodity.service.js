@@ -3,7 +3,7 @@ const { COMMODITY_TABLE, CAR_TABLE ,NEED_TABLE,USERS_TABLE} = require('../consta
 class CommodityService {
   // 发布订单
   async createCommodity(userId,seller, phone, price, image, type,address, title, description) {
-    const statement = `INSERT INTO ${COMMODITY_TABLE} VALUE (null,"${description}","${title}","${type}","${image}",${price},NOW(),"${address}",${userId},0,"${seller}",0)`;
+    const statement = `INSERT INTO ${COMMODITY_TABLE} VALUE (null,"${description}","${title}","${type}","${image}",${price},NOW(),"${address}",${userId},0,"${seller}",1)`;
     try {
       const result = await connection.execute(statement, []);
       return result[0];
@@ -79,7 +79,7 @@ class CommodityService {
   }
     // 发布求购
   async createWantToBuyGoods(userid, name, goods, address) {
-    const statement = `INSERT INTO ${NEED_TABLE} VALUES (null,"${name}","${goods}","${address}","${userid}",now(),0)`;
+    const statement = `INSERT INTO ${NEED_TABLE} VALUES (null,"${name}","${goods}","${address}","${userid}",now(),1)`;
     try {
       const result = await connection.execute(statement, []);
       return result[0];

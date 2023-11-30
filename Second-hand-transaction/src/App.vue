@@ -65,7 +65,7 @@ const wantClick = ()=>{
             <div>
               {{ store.goodsInfo.description }}
             </div>
-            <div style="color: red">￥{{ store.goodsInfo.price }}</div>
+            <div style="color: red">${{ store.goodsInfo.price }}</div>
             <div>{{ store.goodsInfo.address }}</div>
             <div>{{ store.goodsInfo.phone }}</div>
             <div>{{ store.goodsInfo.seller }}</div>

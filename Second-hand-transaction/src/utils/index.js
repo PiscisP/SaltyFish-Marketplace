@@ -1,16 +1,16 @@
 import {ElMessage} from 'element-plus'
 
-// 路由懒加载
+// router loading
 export const LazyRouter = path =>  () => import(`../pages${path}.vue`);
-// 引用图片
+// use img
 export const getImageUrl = (path) =>
     new URL(`../assets/images${path}`, import.meta.url).href
-// 复制
+// copy number
 export const copy = val => {
-    ElMessage.success("电话号码复制成功")
+    ElMessage.success("Phone Number Cpoied")
     return navigator.clipboard.writeText(val);
 }
-// 深拷贝
+// deepclone
 export const deepClone = (obj) => {
     if (typeof obj !== 'object' || obj == null) {
         return obj;
