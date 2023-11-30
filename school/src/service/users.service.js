@@ -48,7 +48,7 @@ class UsersService {
     }
   }
   // user login
-  async userAdminLoginData(username, password) {
+  async userLoginData(username, password) {
     try {
       const statement = `SELECT * FROM ${USERS_TABLE} WHERE username = ? AND password = ?`;
       const result = await connection.execute(statement, [username, password]);
@@ -68,17 +68,17 @@ class UsersService {
     }
   }
   // update user
-  async userGender(id,gender){
-    // ;
-    try {
-      const statement = `UPDATE ${USERS_TABLE} SET gender=${gender} WHERE id=${id}`;
-      const result = await connection.execute(statement, []);
-      console.log(result[0]);
-      return result[0];
-    } catch (err) {
-      throw Error(err);
-    }
-  }
+  // async userGender(id,gender){
+  //   // ;
+  //   try {
+  //     const statement = `UPDATE ${USERS_TABLE} SET gender=${gender} WHERE id=${id}`;
+  //     const result = await connection.execute(statement, []);
+  //     console.log(result[0]);
+  //     return result[0];
+  //   } catch (err) {
+  //     throw Error(err);
+  //   }
+  // }
   // updae user info
   async updateUserInfo(id,school,phone,introduction){
     try {

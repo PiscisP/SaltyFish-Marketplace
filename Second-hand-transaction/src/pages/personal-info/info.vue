@@ -170,49 +170,11 @@ const userInfo = ref([{
   username: store.userInfo[0].username
 }])
 
-const updateShow = ref(false)
-const updateForm = reactive({
-  school: store.userInfo[0]?.school,
-  phone: store.userInfo[0]?.phone,
-  introduction: store.userInfo[0]?.introduction
-})
-const UserInfoSubmit = async () => {
-  await axios.post("http://localhost:5000/users/updateuserinfo", {
-    id: store.userInfo[0].id,
-    school: updateForm.school,
-    phone: updateForm.phone,
-    introduction: updateForm.introduction
-  }).then(res => {
-    if (res.data.code === 200) {
-      ElMessage.success("Update succeed")
-      userInfo.value = [{
-        age: store.userInfo[0].age,
-        createAt: store.userInfo[0].createAt,
-        gender: store.userInfo[0].gender,
-        id: store.userInfo[0].id,
-        introduction: updateForm.introduction,
-        password: store.userInfo[0].password,
-        phone: updateForm.phone,
-        school: updateForm.school,
-        updateAt: store.userInfo[0].updateAt,
-        username: store.userInfo[0].username
-      }];
-      store.updateUserInfo(userInfo.value)
-    } else {
-      ElMessage.error("Update fail")
-    }
-  }).catch(error => {
-    ElMessage.error("Update fail")
-  }).finally(() => {
-    updateShow.value = false;
-  })
-}
 
 
 const active = ref(0)
 const activeDetails1 = ref('yi')
 const activeDetails2 = ref('yi')
-// gstore.allList.filter(item => item.userId === store.userInfo[0].id)
 const listPublish = ref([])
 const listPublish1 = ref([])
 const listPublish0 = ref([])

@@ -1,12 +1,10 @@
 const errorFunction = require('../app/error-function');
-const { MYSQL_ERROR } = require('../deleted files/error-constans');
 const {
   createCommodity,
   inquireCommodityListData,
   inquireCommodityCarListData,
   selectAllGoods,
   createWantToBuyGoods,
-  // updateCommodityListData,
   deleteCommodityListData,
   deleteWantBuyListData
 } = require('../service/commodity.service');

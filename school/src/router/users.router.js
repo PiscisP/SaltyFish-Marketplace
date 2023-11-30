@@ -5,10 +5,8 @@ const { verifyUsernameExisit } = require('../middleware/users.middleware');
 const {
   createUser,
   createCommodityCar,
-  userAdminLogin,
+  userLogin,
   allUserController,
-  // updateGoods,
-  // updateUserInfoController,
   selectUserMessageController,
   deleteUserMessageController,
   createUserMessageController
@@ -18,7 +16,7 @@ const usersRouter = new Router({
 });
 usersRouter.post('/', verifyUapValid, verifyUsernameExisit, createUser); //User register
 usersRouter.post('/commodity/', createCommodityCar); // add to shopping cart
-usersRouter.post('/login', verifyUapValid, userAdminLogin); //User login in
+usersRouter.post('/login', verifyUapValid, userLogin); //User login in
 usersRouter.post('/all', allUserController); //User search
 usersRouter.post('/message',  selectUserMessageController);
 usersRouter.post('/message/delete',  deleteUserMessageController);

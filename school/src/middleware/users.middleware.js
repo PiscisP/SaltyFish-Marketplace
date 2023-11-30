@@ -22,14 +22,8 @@ const verifyUapValid = async (ctx, next) => {
   };
 // Verify username exists
 const verifyUsernameExisit = async (ctx, next) => {
-  const { username } = ctx.request.body;
   try {
-    const result = await inquireusernameData(username);
-   // Throws an error if it exists
-    // if (result.length > 0) {
-    //   return errorFunction(ADMIN_ALREADY_EXISIT, ctx);
-    // }
-    // If it does not exist, go to the next middleware
+    // const result = await inquireusernameData(username);
     await next();
   } catch (err) {
     return errorFunction(MYSQL_ERROR, ctx);

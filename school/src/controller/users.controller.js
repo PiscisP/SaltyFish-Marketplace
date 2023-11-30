@@ -1,19 +1,15 @@
 const {
   createUserData,
   createCommodityCarData,
-  userAdminLoginData,
+  userLoginData,
   allUser,
-  userGender,
-  // updateWantGoods,
-  updateUserInfo,
   selectUserMessage,
   deleteUserMessage,
   createMessage
 } = require('../service/users.service');
-const { MYSQL_ERROR, PASSWORD_ERROR } = require('../deleted files/error-constans');
-// const passwordMD5 = require('../utils/password.handle.js');
 const errorFunction = require('../app/error-function');
 class UsersController {
+
   // Create new account
   async createUser(ctx, next) {
     const { username, password, gender, age, school, phone, introduction } =
@@ -60,10 +56,10 @@ class UsersController {
     }
   }
   // User login
-  async userAdminLogin(ctx, next) {
+  async userLogin(ctx, next) {
     const { username, password } = ctx.request.body;
     try {
-      const result = await userAdminLoginData(username, password);
+      const result = await userLoginData(username, password);
       if (result.length > 0) {
         ctx.body = {
           code: 200,

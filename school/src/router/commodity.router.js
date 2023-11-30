@@ -4,9 +4,6 @@ const {
   createCommodity,
   inquireCommodityList,
   createWantToBuyGoodsController,
-  updateW,
-  updateCommodityListIR,
-  updateCommodityList,
   deleteCommodityList
 } = require('../controller/commodity.controller.js');
 const commodityRouter = new Router({
