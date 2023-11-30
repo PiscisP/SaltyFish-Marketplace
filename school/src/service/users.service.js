@@ -27,7 +27,7 @@ class UsersService {
       throw Error(err);
     }
   }
-  // 查询管理员账户是否存在
+  //查询管理员账户是否存在
   async inquireusernameData(username) {
     const statement = `SELECT * FROM ${USERS_TABLE} WHERE username = ?`;
     try {
@@ -91,13 +91,13 @@ class UsersService {
     }
   }
   // 更新求购商品
-  async updateWantGoods(id,through){
-    const statement = `UPDATE ${NEED_TABLE} SET through=${through} WHERE id=${id}`;
-    const result = await connection.execute(statement,[]);
-    return result[0];
-  } catch (err) {
-    throw Error(err);
-  }
+  // async updateWantGoods(id,through){
+  //   const statement = `UPDATE ${NEED_TABLE} SET through=${through} WHERE id=${id}`;
+  //   const result = await connection.execute(statement,[]);
+  //   return result[0];
+  // } catch (err) {
+  //   throw Error(err);
+  // }
   // 查询所有消息
   async selectUserMessage(id){
     try {

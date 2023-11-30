@@ -31,15 +31,16 @@ class CommodityService {
       throw Error(err);
     }
   }
-  async updateCommodityListDataIR(id,isrelease) {
-    try {
-      const statement = `UPDATE ${COMMODITY_TABLE} SET isrelease=${isrelease} WHERE id=${id}`;
-      const result = await connection.execute(statement, []);
-      return result[0];
-    } catch (err) {
-      throw Error(err);
-    }
-  }
+
+  // async updateCommodityListDataIR(id,isrelease) {
+  //   try {
+  //     const statement = `UPDATE ${COMMODITY_TABLE} SET isrelease=${isrelease} WHERE id=${id}`;
+  //     const result = await connection.execute(statement, []);
+  //     return result[0];
+  //   } catch (err) {
+  //     throw Error(err);
+  //   }
+  // }
   //  删除商品
   async deleteCommodityListData(id) {
     try {
@@ -70,13 +71,13 @@ class CommodityService {
       throw Error(err);
     }
   // 更新求购商品
-  async updateWantGoods(id,through){
-    const statement = `UPDATE ${NEED_TABLE} SET through=${through} WHERE id=${id}`;
-    const result = await connection.execute(statement,[]);
-    return result[0];
-  } catch (err) {
-    throw Error(err);
-  }
+  // async updateWantGoods(id,through){
+  //   const statement = `UPDATE ${NEED_TABLE} SET through=${through} WHERE id=${id}`;
+  //   const result = await connection.execute(statement,[]);
+  //   return result[0];
+  // } catch (err) {
+  //   throw Error(err);
+  // }
     // 发布求购
   async createWantToBuyGoods(userid, name, goods, address) {
     const statement = `INSERT INTO ${NEED_TABLE} VALUES (null,"${name}","${goods}","${address}","${userid}",now(),1)`;

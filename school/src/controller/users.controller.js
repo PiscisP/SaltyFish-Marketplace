@@ -11,7 +11,7 @@ const {
   createMessage
 } = require('../service/users.service');
 const { MYSQL_ERROR, PASSWORD_ERROR } = require('../constans/error-constans');
-const passwordMD5 = require('../utils/password.handle.js');
+// const passwordMD5 = require('../utils/password.handle.js');
 const errorFunction = require('../app/error-function');
 class UsersController {
   // 新建用户
@@ -21,7 +21,7 @@ class UsersController {
     try {
       const result = await createUserData(
         username,
-        passwordMD5(password),
+        password,
         gender,
         age,
         school,
@@ -63,7 +63,7 @@ class UsersController {
   async userAdminLogin(ctx, next) {
     const { username, password } = ctx.request.body;
     try {
-      const result = await userAdminLoginData(username, passwordMD5(password));
+      const result = await userAdminLoginData(username, password);
       if (result.length > 0) {
         ctx.body = {
           code: 200,
@@ -95,20 +95,20 @@ class UsersController {
     }
   }
   // 更新用户
-  async updateUserController(ctx, next) {
-    try {
-      const { id, gender } = ctx.request.body;
-      const result = await userGender(+id,+gender);
-      ctx.body = {
-        code: 200,
-        message: `更新成功！`,
-        success: true
-      };
-    } catch (err) {
-      console.log(err);
-      return errorFunction(MYSQL_ERROR, ctx);
-    }
-  }
+  // async updateUserController(ctx, next) {
+  //   try {
+  //     const { id, gender } = ctx.request.body;
+  //     const result = await userGender(+id,+gender);
+  //     ctx.body = {
+  //       code: 200,
+  //       message: `更新成功！`,
+  //       success: true
+  //     };
+  //   } catch (err) {
+  //     console.log(err);
+  //     return errorFunction(MYSQL_ERROR, ctx);
+  //   }
+  // }
   // 更新用户信息 updateUserInfo
   async updateUserInfoController(ctx, next) {
     try {

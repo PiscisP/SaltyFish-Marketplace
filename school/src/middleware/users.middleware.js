@@ -25,7 +25,7 @@ const verifyUsernameExisit = async (ctx, next) => {
   const { username } = ctx.request.body;
   try {
     const result = await inquireusernameData(username);
-    // 如果存在则抛出错误
+   // 如果存在则抛出错误
     // if (result.length > 0) {
     //   return errorFunction(ADMIN_ALREADY_EXISIT, ctx);
     // }

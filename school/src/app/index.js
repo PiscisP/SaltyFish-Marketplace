@@ -5,7 +5,7 @@ const bodyParser = require('koa-bodyparser');
 // const koaBody = require('koa-body');
 //自定义模块导入
 const readRouters = require('../router');
-const errorHandle = require('../app/error-handle');
+// const errorHandle = require('../app/error-handle');
 const app = new Koa();
 app.readRouters = readRouters;
 app.use(cors()); //跨域配置
@@ -18,6 +18,6 @@ app.use(bodyParser());
 // }));
 app.readRouters();
 
-app.on('error', errorHandle);
+// app.on('error', errorHandle);
 
 module.exports = app;

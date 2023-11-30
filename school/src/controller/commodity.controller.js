@@ -46,35 +46,35 @@ class CommodityController {
     }
   }
   // 修改商品
-  async updateCommodityList(ctx, next) {
-    const {id,recommend} = ctx.request.body;
-    try {
-      const result = await updateCommodityListData(id,recommend);
-      //返回逻辑
-      ctx.body = {
-        code: 200,
-        message: `修改成功！！`,
-        success: true
-      };
-    } catch (err) {
-      return errorFunction(MYSQL_ERROR, ctx);
-    }
-  }
+  // async updateCommodityList(ctx, next) {
+  //   const {id,recommend} = ctx.request.body;
+  //   try {
+  //     const result = await updateCommodityListData(id,recommend);
+  //     //返回逻辑
+  //     ctx.body = {
+  //       code: 200,
+  //       message: `修改成功！！`,
+  //       success: true
+  //     };
+  //   } catch (err) {
+  //     return errorFunction(MYSQL_ERROR, ctx);
+  //   }
+  // }
   //更新商品
-  async updateCommodityListIR(ctx, next) {
-    const {id,isrelease} = ctx.request.body;
-    try {
-      const result = await updateCommodityListDataIR(id,isrelease);
-      //返回逻辑
-      ctx.body = {
-        code: 200,
-        message: `修改成功！！`,
-        success: true
-      };
-    } catch (err) {
-      return errorFunction(MYSQL_ERROR, ctx);
-    }
-  }
+  // async updateCommodityListIR(ctx, next) {
+  //   const {id,isrelease} = ctx.request.body;
+  //   try {
+  //     const result = await updateCommodityListDataIR(id,isrelease);
+  //     //返回逻辑
+  //     ctx.body = {
+  //       code: 200,
+  //       message: `修改成功！！`,
+  //       success: true
+  //     };
+  //   } catch (err) {
+  //     return errorFunction(MYSQL_ERROR, ctx);
+  //   }
+  // }
   // 删除商品
   async deleteCommodityList(ctx, next) {
     const {id} = ctx.request.body;
@@ -135,22 +135,23 @@ class CommodityController {
     }
   }
   // 更新求购
-  async updateW(ctx,next){
-    // updateWantGoods
-    const {id,through} = ctx.request.body;
-    try {
-      const result = await updateWantGoods(+id,+through);
-      console.log("result: ",result);
-      //返回逻辑
-      ctx.body = {
-        code: 200,
-        message: `更新成功！！`,
-        success: true
-      };
-    } catch (err) {
-      return errorFunction(MYSQL_ERROR, ctx);
-    }
-  }
+  // async updateW(ctx,next){
+  //   // updateWantGoods
+  //   const {id,through} = ctx.request.body;
+  //   try {
+  //     const result = await updateWantGoods(+id,+through);
+  //     console.log("result: ",result);
+  //     //返回逻辑
+  //     ctx.body = {
+  //       code: 200,
+  //       message: `更新成功！！`,
+  //       success: true
+  //     };
+  //   } catch (err) {
+  //     return errorFunction(MYSQL_ERROR, ctx);
+  //   }
+  // }
+
   // 删除求购 deleteWantBuyListData
   async delWantBuyController(ctx,next){
     // updateWantGoods
