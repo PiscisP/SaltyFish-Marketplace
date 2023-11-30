@@ -17,26 +17,7 @@
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
 
--- ----------------------------
--- Table structure for school_admin
--- ----------------------------
-DROP TABLE IF EXISTS `school_admin`;
-CREATE TABLE `school_admin`  (
-  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT 'User ID',
-  `username` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT 'User Account',
-  `password` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT 'User Password',
-  `createAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT 'Create time',
-  `updateAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'update time',
-  PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
--- ----------------------------
--- Records of school_admin
--- ----------------------------
-INSERT INTO `school_admin` VALUES (1, 'a12345678', '123', '2022-04-16 23:15:12', '2022-04-16 23:15:34');
-INSERT INTO `school_admin` VALUES (2, 'aa12345678', '93f628b5ba5e1ebcb02e88cd7f8587d2', '2022-04-16 23:31:51', '2022-04-16 23:31:51');
-INSERT INTO `school_admin` VALUES (3, 'aa12345678', '93f628b5ba5e1ebcb02e88cd7f8587d2', '2022-04-16 23:47:51', '2022-04-16 23:47:51');
-INSERT INTO `school_admin` VALUES (4, 'aa112345678', 'f5baabe7e8e313e3022cf51e51da82b3', '2022-04-17 02:34:32', '2022-04-17 02:34:32');
 
 -- ----------------------------
 -- Table structure for school_commodity
