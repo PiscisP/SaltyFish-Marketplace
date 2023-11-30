@@ -94,50 +94,7 @@ class UsersController {
       return errorFunction(MYSQL_ERROR, ctx);
     }
   }
-  // update user
-  // async updateUserController(ctx, next) {
-  //   try {
-  //     const { id, gender } = ctx.request.body;
-  //     const result = await userGender(+id,+gender);
-  //     ctx.body = {
-  //       code: 200,
-  //       message: `Update succeed`,
-  //       success: true
-  //     };
-  //   } catch (err) {
-  //     console.log(err);
-  //     return errorFunction(MYSQL_ERROR, ctx);
-  //   }
-  // }
-  //  updateUserInfo
-  // async updateUserInfoController(ctx, next) {
-  //   try {
-  //     const { id, school,phone,introduction } = ctx.request.body;
-  //     const result = await updateUserInfo(+id,school,phone,introduction);
-  //     ctx.body = {
-  //       code: 200,
-  //       message: `Update succeed!`,
-  //       success: true
-  //     };
-  //   } catch (err) {
-  //     console.log(err);
-  //     return errorFunction(MYSQL_ERROR, ctx);
-  //   }
-  // }
-  // async updateGoods(ctx, next) {
-  //   try {
-  //     const { id, through } = ctx.request.body;
-  //     const  result = await  updateWantGoods(+id,+through);
-  //     ctx.body = {
-  //       code: 200,
-  //       message: `Update succeed!`,
-  //       success: true
-  //     };
-  //   } catch (err) {
-  //     console.log(err);
-  //     return errorFunction(MYSQL_ERROR, ctx);
-  //   }
-  // }
+  
   //Search User info selectUserMessage
   async selectUserMessageController(ctx, next) {
     try {

@@ -11,7 +11,7 @@
         <div>{{item.createAt}}</div>
         <div class="card-bottom">
           <div>${{ item.price }}</div>
-          <el-button type="text" size="large" @click="store.goodsDetail(item,myself)">see detials</el-button>
+          <el-button type="text" size="large" @click="store.goodsDetail(item,myself)">see details</el-button>
         </div>
         <el-button type="primary" style="width: 100%;" @click="emit('del-click',item.id)" v-if="props.myself">delete item</el-button>
       </div>
