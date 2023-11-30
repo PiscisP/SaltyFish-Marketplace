@@ -1,19 +1,19 @@
-//第三方模块导入
+//Third-party module import
 const Koa = require('koa');
 const cors = require('koa2-cors');
 const bodyParser = require('koa-bodyparser');
 // const koaBody = require('koa-body');
-//自定义模块导入
+//Custom module import
 const readRouters = require('../router');
 // const errorHandle = require('../app/error-handle');
 const app = new Koa();
 app.readRouters = readRouters;
-app.use(cors()); //跨域配置
+app.use(cors()); //Cross-domain configuration
 app.use(bodyParser());
 // app.use(koaBody({
 //   multipart: true,
 //   formidable: {
-//     maxFileSize: 200*1024*1024    // 设置上传文件大小最大限制，默认2M
+//     maxFileSize: 200*1024*1024    // Set the maximum upload file size limit, the default is 2M
 //   }
 // }));
 app.readRouters();

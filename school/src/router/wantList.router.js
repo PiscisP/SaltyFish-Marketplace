@@ -1,4 +1,4 @@
-/* 后台管理类相关接口 */
+/* Backend management related interfaces */
 const Router = require('koa-router');
 const {
   selectAllGoodsController,

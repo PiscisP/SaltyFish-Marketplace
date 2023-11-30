@@ -14,7 +14,7 @@ const { MYSQL_ERROR, PASSWORD_ERROR } = require('../deleted files/error-constans
 // const passwordMD5 = require('../utils/password.handle.js');
 const errorFunction = require('../app/error-function');
 class UsersController {
-  // 新建用户
+  // Create new account
   async createUser(ctx, next) {
     const { username, password, gender, age, school, phone, introduction } =
       ctx.request.body;
@@ -29,10 +29,10 @@ class UsersController {
         introduction
       );
       const { insertId } = result;
-      //返回逻辑
+      //return logic
       ctx.body = {
         code: 200,
-        message: `${username}，欢迎加入！`,
+        message: `${username}，Welcome to the market！`,
         success: true,
         data: {
           id: insertId,
@@ -43,15 +43,15 @@ class UsersController {
       return errorFunction(MYSQL_ERROR, ctx);
     }
   }
-  // 加入购物车
+  // add to shopping cart
   async createCommodityCar(ctx, next) {
     const { userId, commodityId } = ctx.request.body;
     try {
       await createCommodityCarData(userId, commodityId);
-      //返回逻辑
+      //return logic
       ctx.body = {
         code: 200,
-        message: `加购成功！`,
+        message: `Added succeed！`,
         success: true
       };
     } catch (err) {
@@ -59,7 +59,7 @@ class UsersController {
       return errorFunction(MYSQL_ERROR, ctx);
     }
   }
-  // 用户登录
+  // User login
   async userAdminLogin(ctx, next) {
     const { username, password } = ctx.request.body;
     try {
@@ -67,7 +67,7 @@ class UsersController {
       if (result.length > 0) {
         ctx.body = {
           code: 200,
-          message: `登录成功！`,
+          message: `Login succeed!`,
           success: true,
           data: result
         };
@@ -79,13 +79,13 @@ class UsersController {
       return errorFunction(MYSQL_ERROR, ctx);
     }
   }
-  // 查询所有用户
+  // Search all the users
   async allUserController(ctx, next) {
     try {
       const result = await allUser();
         ctx.body = {
           code: 200,
-          message: `查询成功！`,
+          message: `Search succeed!`,
           success: true,
           data: result
         };
@@ -94,14 +94,14 @@ class UsersController {
       return errorFunction(MYSQL_ERROR, ctx);
     }
   }
-  // 更新用户
+  // update user
   // async updateUserController(ctx, next) {
   //   try {
   //     const { id, gender } = ctx.request.body;
   //     const result = await userGender(+id,+gender);
   //     ctx.body = {
   //       code: 200,
-  //       message: `更新成功！`,
+  //       message: `Update succeed`,
   //       success: true
   //     };
   //   } catch (err) {
@@ -109,14 +109,14 @@ class UsersController {
   //     return errorFunction(MYSQL_ERROR, ctx);
   //   }
   // }
-  // 更新用户信息 updateUserInfo
+  //  updateUserInfo
   async updateUserInfoController(ctx, next) {
     try {
       const { id, school,phone,introduction } = ctx.request.body;
       const result = await updateUserInfo(+id,school,phone,introduction);
       ctx.body = {
         code: 200,
-        message: `更新成功！`,
+        message: `Update succeed!`,
         success: true
       };
     } catch (err) {
@@ -130,7 +130,7 @@ class UsersController {
       const  result = await  updateWantGoods(+id,+through);
       ctx.body = {
         code: 200,
-        message: `更新成功！`,
+        message: `Update succeed!`,
         success: true
       };
     } catch (err) {
@@ -138,14 +138,14 @@ class UsersController {
       return errorFunction(MYSQL_ERROR, ctx);
     }
   }
-  //查询用户信息 selectUserMessage
+  //Search User info selectUserMessage
   async selectUserMessageController(ctx, next) {
     try {
       const { id } = ctx.request.body;
       const  result = await  selectUserMessage(+id);
       ctx.body = {
         code: 200,
-        message: `查询成功！`,
+        message: `Search succeed!`,
         success: true,
         data: result
       };
@@ -154,14 +154,14 @@ class UsersController {
       return errorFunction(MYSQL_ERROR, ctx);
     }
   }
-  //删除用户信息 selectUserMessage
+  //Delete user info selectUserMessage
   async deleteUserMessageController(ctx, next) {
     try {
       const { id } = ctx.request.body;
       const  result = await  deleteUserMessage(+id);
       ctx.body = {
         code: 200,
-        message: `删除成功！`,
+        message: `Delete Succeed`,
         success: true,
         data: result
       };
@@ -170,14 +170,14 @@ class UsersController {
       return errorFunction(MYSQL_ERROR, ctx);
     }
   }
-  // 新增用户信息 createMessage
+  // New user info createMessage
   async createUserMessageController(ctx, next) {
     try {
       const { userid,message } = ctx.request.body;
       const  result = await  createMessage(+userid,message);
       ctx.body = {
         code: 200,
-        message: `发送成功！`,
+        message: `Send succeed!`,
         success: true,
         data: result
       };
