@@ -10,7 +10,7 @@ const {
   deleteUserMessage,
   createMessage
 } = require('../service/users.service');
-const { MYSQL_ERROR, PASSWORD_ERROR } = require('../constans/error-constans');
+const { MYSQL_ERROR, PASSWORD_ERROR } = require('../deleted files/error-constans');
 // const passwordMD5 = require('../utils/password.handle.js');
 const errorFunction = require('../app/error-function');
 class UsersController {

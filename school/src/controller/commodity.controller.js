@@ -1,5 +1,5 @@
 const errorFunction = require('../app/error-function');
-const { MYSQL_ERROR } = require('../constans/error-constans');
+const { MYSQL_ERROR } = require('../deleted files/error-constans');
 const {
   createCommodity,
   inquireCommodityListData,

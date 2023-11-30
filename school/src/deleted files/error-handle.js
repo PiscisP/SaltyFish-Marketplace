@@ -1,5 +1,5 @@
 /* 错误处理控制件 */
-const errorTypes = require('../constans/error-constans.js');
+const errorTypes = require('./error-constans.js');
 const errorHandle = (error, ctx) => {
   let status, message;
   switch (error.message) {
