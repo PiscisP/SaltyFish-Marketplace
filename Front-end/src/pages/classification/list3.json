@@ -1,0 +1,32 @@
+[
+  {
+    "name": "seond hand textbook",
+    "img": "https://s1.328888.xyz/2022/04/20/rwcLM.jpg",
+    "price": 12.5,
+    "detail": "CSCI textbook XXXXXX",
+    "address": "SCUXXXX",
+    "phone": "1408XXXXXX",
+    "seller": "Kuangyu Dai",
+    "type": 3
+  },
+  {
+    "name": "seond hand textbook",
+    "img": "https://s1.328888.xyz/2022/04/20/rwcLM.jpg",
+    "price": 12.5,
+    "detail": "CSCI textbook XXXXXX",
+    "address": "SCUXXXX",
+    "phone": "1408XXXXXX",
+    "seller": "Kuangyu Dai",
+    "type": 3
+  },
+  {
+    "name": "seond hand textbook",
+    "img": "https://s1.328888.xyz/2022/04/20/rwcLM.jpg",
+    "price": 12.5,
+    "detail": "CSCI textbook XXXXXX",
+    "address": "SCUXXXX",
+    "phone": "1408XXXXXX",
+    "seller": "Kuangyu Dai",
+    "type": 3
+  }
+]
