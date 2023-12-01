@@ -181,13 +181,11 @@ const deletePublish = async (id)=>{
   }).then(res=>{
     if(res.data.code === 200){
       ElMessage.success("Delete succeed")
-      alert(1)
+      // alert(1)
       list.value = list.value.filter(v => v.id !== id)
     }else {
       ElMessage.error("Delete fail")
     }
-  }).catch(error=>{
-    ElMessage.error("Delete fail")
   })
 }
 const deletePublish1 = id =>{
