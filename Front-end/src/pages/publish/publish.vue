@@ -17,11 +17,7 @@
         <el-input v-model="ruleForm.name" placeholder="Please enter the name of item" clearable/>
       </el-form-item>
       <el-form-item label="Item price" prop="price">
-        <el-input-number
-            v-model="ruleForm.price"
-            :min="0"
-            controls-position="right"
-            style="width: 100%"
+        <el-input placeholder="Please enter the price of item"
         />
       </el-form-item>
       <el-form-item label="Item type" prop="type">
