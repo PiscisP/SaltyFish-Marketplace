@@ -82,7 +82,7 @@
                 <el-button type="text" @click="onDeleteMessage(item.id)">Delete info</el-button>
               </el-card>
             </el-timeline-item>
-            <el-timeline-item placement="top" v-if="messageList.length === 0">
+            <el-timeline-item placement="top" >
               <el-card>
                 <p>No info yet...</p>
               </el-card>
