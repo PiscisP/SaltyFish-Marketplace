@@ -42,25 +42,25 @@ CREATE TABLE `school_commodity`  (
 -- ----------------------------
 -- Records of school_commodity
 -- ----------------------------
-INSERT INTO `school_commodity` VALUES (1, 'second hand book, packed to go', 'second hand book', '3', 'https://assets.penguinrandomhouse.com/wp-content/uploads/2018/03/05105825/1200x628_instagrammable.jpg', 12.50, '2023-11-25 20:01:45', 'SCUXXXXXXXX', 1, 0, 'Rocky', 0);
+INSERT INTO `school_commodity` VALUES (1, 'Harry Potter, all series', 'second hand book', '3', 'https://i.ebayimg.com/images/g/iMYAAOSwGcVk5jfD/s-l1600.png', 30.00, '2023-11-25 20:01:45', 'SCUXXXXXXXX', 1, 0, 'Rocky', 0);
 INSERT INTO `school_commodity` VALUES (2, 'second hand book, packed to go', 'second hand book', '3', 'https://assets.penguinrandomhouse.com/wp-content/uploads/2018/03/05105825/1200x628_instagrammable.jpg', 12.50, '2023-11-24 20:18:36', 'SCUXXXXXXXX', 1, 1, 'Rocky', 1);
-INSERT INTO `school_commodity` VALUES (3, 'second hand book. Nice sotry', 'second hand book', '3', 'https://assets.penguinrandomhouse.com/wp-content/uploads/2018/03/05105825/1200x628_instagrammable.jpg', 12.50, '2023-11-24 14:22:33', 'SCUXXXXXXXX', 1, 0, 'Pocky', 1);
+INSERT INTO `school_commodity` VALUES (3, 'This is second hand CSCI 60 textbook, it is pretty new, I did not write anything in this book, 50% of orginal price ', 'second hand textbook', '3', 'https://img.thriftbooks.com/api/images/m/1e0a2da1814225553b0e0e5809531623fae19845.jpg', 58.00, '2023-11-24 14:22:33', 'SCUXXXXXXXX', 1, 0, 'Pocky', 1);
 INSERT INTO `school_commodity` VALUES (4, 'A fancy tea cup, orginal price is 23, a great deal right now ', 'tea cups', '6', 'https://m.media-amazon.com/images/I/61pFP3+lrPL.jpg', 1.50, '2023-11-24 09:31:59', 'SCUXXXXXXXX', 5, 1, 'yuumi', 1);
 INSERT INTO `school_commodity` VALUES (5, 'A Ikea table，used only half year,', 'Ikea table', '6', 'https://www.ikea.com/us/en/images/products/linnmon-adils-table-white__0737165_pe740925_s5.jpg?f=xl', 30.00, '2023-11-24 09:32:00', 'SCUXXXXXXXX', 5, 1, 'yuumi', 1);
 INSERT INTO `school_commodity` VALUES (6, 'A sofa bed，there are some scratch ', 'sofa bed', '6', 'https://cdn-images.article.com/products/SKU17040/2890x1500/image66845.jpg', 300.00, '2023-11-24 09:32:01', 'SCUXXXXXXXX', 5, 1, 'yuumi', 1);
-INSERT INTO `school_commodity` VALUES (7, 'A wooden chair', 'chair', '6', 'https://cdn-images.article.com/products/SKU15417/2890x1500/image65744.jpg', 1.50, '2023-11-24 09:32:01', 'SCUXXXXXXXX', 5, 1, 'yuumi', 1);
-INSERT INTO `school_commodity` VALUES (8, 'A wooden dinner table', 'dining-table', '6', 'https://res.cloudinary.com/castlery/image/private/w_1920,f_auto,q_auto/b_rgb:FFFFFF,c_fit/v1657271967/crusader/variants/PB-DR0109/Seb-Dining-Squaie-Table-Set8__1_-1657271965.jpg', 888.50, '2023-11-24 09:32:02', 'SCUXXXXXXXX', 5, 1, 'yuumi', 1);
+INSERT INTO `school_commodity` VALUES (7, 'A wooden chair, used only half year, 90% new', 'chair', '6', 'https://cdn-images.article.com/products/SKU15417/2890x1500/image65744.jpg', 68.00, '2023-11-24 09:32:01', 'SCUXXXXXXXX', 5, 1, 'yuumi', 1);
+INSERT INTO `school_commodity` VALUES (8, 'A wooden dinner table, used 1 year, original price is 500 dollars. Now only half of 500', 'dining-table', '6', 'https://res.cloudinary.com/castlery/image/private/w_1920,f_auto,q_auto/b_rgb:FFFFFF,c_fit/v1657271967/crusader/variants/PB-DR0109/Seb-Dining-Squaie-Table-Set8__1_-1657271965.jpg', 250.00, '2023-11-24 09:32:02', 'picked up at Benton', 5, 1, 'yuumi', 1);
 INSERT INTO `school_commodity` VALUES (9, 'exercise bike, spend thousands dollars before, want to buy a new one, have orignial receipt', 'second hand exercise bike', '2', 'https://m.media-amazon.com/images/I/71PVBwDOTAL._AC_UF1000,1000_QL80_.jpg', 500.00, '2023-11-24 09:31:41', 'san jose', 7, 0, 'Andy', 1);
 INSERT INTO `school_commodity` VALUES (10, ' bike, spend thousands dollars before, want to buy a new one, have orignial receipt', ' bike', '2', 'https://target.scene7.com/is/image/Target/GUEST_e3e9aa8c-8360-4aa5-a257-76f00d088957?wid=1000&hei=1000&qlt=80&fmt=pjpeg', 500.00, '2023-11-24 09:32:03', 'san jose', 7, 1, 'Andy', 0);
-INSERT INTO `school_commodity` VALUES (11, 'brand new frying pan, 90% New', 'fry pan', '6', 'https://m.media-amazon.com/images/I/71nd7YSIRGL.jpg', 500.00, '2023-11-24 09:31:43', 'san jose', 7, 0, 'Andy', 1);
-INSERT INTO `school_commodity` VALUES (12, 'A expensive bowl, like new!', 'bowl', '2', 'https://m.media-amazon.com/images/I/41Jg9K5MpsL._AC_SL1130_.jpg', 500.00, '2023-11-24 09:32:04', 'san jose', 7, 1, 'Andy', 0);
+INSERT INTO `school_commodity` VALUES (11, 'brand new frying pan', 'fry pan', '2', 'https://m.media-amazon.com/images/I/71nd7YSIRGL.jpg', 188.00, '2023-11-24 09:31:43', 'san jose', 7, 0, 'Andy', 1);
+INSERT INTO `school_commodity` VALUES (12, 'A expensive bowl', 'bowl', '2', 'https://m.media-amazon.com/images/I/41Jg9K5MpsL._AC_SL1130_.jpg', 50.00, '2023-11-24 09:32:04', 'san jose', 7, 1, 'Andy', 0);
 INSERT INTO `school_commodity` VALUES (14, 'children gamepad, more than 5000 child game', 'gamepad', '5', 'https://m.media-amazon.com/images/I/71WzEVtX4yL._AC_UF894,1000_QL80_.jpg', 12.00, '2023-11-24 09:32:13', 'SJSU', 6, 1, 'Mia', 1);
-INSERT INTO `school_commodity` VALUES (15, 'a switch with XXXXXXX', 'switch', '5', 'https://m.media-amazon.com/images/I/71pIS8f417L._SL1500_.jpg', 12.00, '2023-11-24 09:32:05', 'SJSU', 6, 1, 'Mia', 1);
+INSERT INTO `school_commodity` VALUES (15, 'a switch with XXXXXXX', 'switch', '5', 'https://m.media-amazon.com/images/I/71pIS8f417L._SL1500_.jpg', 38.00, '2023-11-24 09:32:05', 'SJSU', 6, 1, 'Mia', 1);
 INSERT INTO `school_commodity` VALUES (16, 'children gamepad, more than 5000 child game', 'headphone', '5', 'https://m.media-amazon.com/images/I/61z-rTknwVS._AC_SL1500_.jpg', 12.00, '2023-11-24 09:31:47', 'SJSU', 6, 0, 'Mia', 1);
 INSERT INTO `school_commodity` VALUES (17, 'A pack of snacks, never open, brand new ', 'a pack of snacks', '10', 'https://m.media-amazon.com/images/I/81EfJxnaJ3L._SL1200_.jpg', 20.00, '2023-11-24 09:27:45', ' The Benton', 7, 0, 'Li', 0);
-INSERT INTO `school_commodity` VALUES (18, 'A pack of snacks, never open, brand new ', 'a pack of snacks', '10', 'https://m.media-amazon.com/images/I/81EfJxnaJ3L._SL1200_.jpg', 20.00, '2023-11-24 09:32:12', ' The Benton', 7, 1, 'Li', 1);
+INSERT INTO `school_commodity` VALUES (18, 'Origin dog treats, 10 packes, my dog did not like it, failed to return online, 30% discount ', 'Dog treats', '10', 'https://image.chewy.com/is/image/catalog/116308_MAIN._AC_SL1200_V1657655275_.jpg', 30.00, '2023-11-24 09:32:12', ' The Benton', 7, 1, 'Li', 1);
 INSERT INTO `school_commodity` VALUES (22, 'switch games', 'switch games', '1', 'https://qvc.scene7.com/is/image/QVC/e/10/e318410_180.102?$aempdlarge$', 33.00, '2023-11-23 17:03:59', 'SCUXXX', 7, 1, 'Mr.good', 1);
-INSERT INTO `school_commodity` VALUES (23, '80% new', 'Retro Vintage Radio', '1', 'https://m.media-amazon.com/images/I/811mAg3gU+L._AC_SL1500_.jpg', 15.00, '2023-11-24 19:50:57', 'SCU Benson', 8, 1, 'Jack', 1);
+INSERT INTO `school_commodity` VALUES (23, '80% new', 'Retro Vintage Radio', '1', 'https://m.media-amazon.com/images/I/811mAg3gU+L._AC_SL1500_.jpg', 20.00, '2023-11-24 19:50:57', 'SCU Benson', 8, 1, 'Jack', 1);
 INSERT INTO `school_commodity` VALUES (24, 'Brand new, never opened before', 'SKII', '9', 'https://cdn11.bigcommerce.com/s-x3hur0xe4r/images/stencil/500w/products/218/1808/01_Hero_330ml__47189.1697229404.png', 180.00, '2023-11-23 20:22:42', 'SCU Benson', 8, 0, 'Five', 0);
 
 -- ----------------------------
@@ -83,19 +83,19 @@ CREATE TABLE `school_need`  (
 -- ----------------------------
 -- Records of school_need
 -- ----------------------------
-INSERT INTO `school_need` VALUES (1, 'Lee', 'earpods', 'SCU Library', 5, '2023-11-25 12:17:57', 1);
-INSERT INTO `school_need` VALUES (2, 'Red', 'charger', 'Oconor 215', 1, '2023-11-25 12:17:58', 1);
-INSERT INTO `school_need` VALUES (3, 'Peter', 'Needs a table, please!', 'Domicilo', 5, '2023-11-25 12:17:58', 1);
-INSERT INTO `school_need` VALUES (4, 'Peter', 'Needs a table, please!', 'Domicilo', 7, '2023-11-25 12:17:59', 1);
-INSERT INTO `school_need` VALUES (5, 'Peter', 'Needs a table, please!', 'Domicilo', 1, '2023-11-25 12:18:00', 1);
-INSERT INTO `school_need` VALUES (6, 'Peter', 'Needs a table, please!', 'Domicilo', 6, '2023-11-25 16:40:07', 0);
-INSERT INTO `school_need` VALUES (7, 'Lee', 'I want a 90% new iphone', 'Domicilo', 7, '2023-11-25 16:40:06', 0);
-INSERT INTO `school_need` VALUES (8, 'Lee', 'I want a 90% new iphone', 'Domicilo', 7, '2023-11-25 16:40:09', 0);
-INSERT INTO `school_need` VALUES (9, 'Lee', 'I want a 90% new iphone', 'Domicilo', 7, '2023-11-25 16:40:12', 0);
-INSERT INTO `school_need` VALUES (10, 'Lee', 'I want a 90% new iphone', 'Domicilo', 7, '2023-11-25 12:18:03', 1);
+INSERT INTO `school_need` VALUES (1, 'Lee', 'looking for a earpods', '666room', 5, '2023-11-25 12:17:57', 1);
+INSERT INTO `school_need` VALUES (2, 'Red', 'charger', 'next door', 1, '2023-11-25 12:17:58', 1);
+INSERT INTO `school_need` VALUES (3, 'William', 'Needs a table, please!', 'Domicilo', 5, '2023-11-25 12:17:58', 1);
+INSERT INTO `school_need` VALUES (4, 'Peter', 'Needs a Apple Pencil, please!', 'SJ Japan town', 7, '2023-11-25 12:17:59', 1);
+INSERT INTO `school_need` VALUES (5, 'Alex', 'Needs a chair, please!', 'Domicilo', 1, '2023-11-25 12:18:00', 1);
+INSERT INTO `school_need` VALUES (6, 'Peter', 'Needs a fry pan, please!', 'San Jose', 6, '2023-11-25 16:40:07', 0);
+INSERT INTO `school_need` VALUES (7, 'Jack', 'I want a king size bed', 'Domicilo', 7, '2023-11-25 16:40:06', 0);
+INSERT INTO `school_need` VALUES (8, 'Lee', 'looking for a Mac desktop', 'Mountain View', 7, '2023-11-25 16:40:09', 0);
+INSERT INTO `school_need` VALUES (9, 'Lucy', 'I want a 90% new iphone', 'Domicilo', 7, '2023-11-25 16:40:12', 0);
+INSERT INTO `school_need` VALUES (10, 'Lily', 'I want a Ipad', 'Domicilo', 7, '2023-11-25 12:18:03', 1);
 INSERT INTO `school_need` VALUES (11, 'Lee', 'I want a 90% new iphone', 'Domicilo', 7, '2023-11-25 12:18:04', 1);
 INSERT INTO `school_need` VALUES (12, 'Zhang', 'English book', 'library', 1, '2023-11-25 16:40:03', 1);
-INSERT INTO `school_need` VALUES (19, 'Ben', 'want an Airpods pro', 'Beson 1st floor', 8, '2023-11-23 19:51:42', 1);
+INSERT INTO `school_need` VALUES (19, 'Si', 'want a Airpods pro', 'The benton', 8, '2023-11-23 19:51:42', 1);
 
 -- ----------------------------
 -- Table structure for school_user
